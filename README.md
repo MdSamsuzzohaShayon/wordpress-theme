@@ -23,4 +23,19 @@ Process step by step
 9. Show all the text inside website with php dynamic functions that can found wordpress website
 
 10. make a functions.php file REGISTER NAV WALKER CLASS ALIAS create dynamic navbar code can found in wordpress website
-11. 
+
+11. https://github.com/wp-bootstrap/wp-bootstrap-navwalker follow the instruction for creating custom menu and download class-wp-bootstrap-navwalker.php
+
+12. single.php is for a single post that can customize
+
+13. page.php is for showing details of custom single page not post 
+
+14. content.php is just handmade file for rendering blog content inside index.php
+
+15. comments.php  is for customizing our comments
+
+
+
+
+
+
