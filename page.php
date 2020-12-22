@@ -1,29 +1,21 @@
-<?php get_header(); ?>
-
-<!-- ALL IMPORTENT FUNCTION OF WORDPRESS   -->
-<!-- https://developer.wordpress.org/themes/getting-started/ -->
-      <div class="row">
-
-        <div class="col-sm-8 blog-main">
-          <?php if(have_posts()) : ?>
-              <?php while(have_posts()) : the_post(); ?>
-
-              <div class="blog-post">
-                  <h2 class="blog-post-title">
-                    <?php the_title(); ?>
-                  </h2>
-                  <!-- the_date();  -->
-                  <?//php the_content();?>
-                  <!-- for limited text in the body -->
-                  <?php the_content();?>
-              </div><!-- /.blog-post -->
-              <?php endwhile; ?>
-          <?php else : ?>
-              <p><?php __('No page found'); ?></p>
-          <?php endif; ?>
+<?php
+get_header();
+?>
 
 
+<article class="content px-3 py-5 p-md-5">
+    <?php
+    //        https://developer.wordpress.org/reference/functions/the_content/
+    if(have_posts()){
+        while (have_posts()){
+            the_post();
+//            the_content();
+            get_template_part('template-parts/content', 'page');
+        }
+    }
+    ?>
+</article>
 
-        </div><!-- /.blog-main -->
-
- <?php get_footer(); ?>
+<?php
+get_footer();
+?>

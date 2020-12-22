@@ -1,38 +1,47 @@
-<div class="comments">
-    <h2>Comments</h2>
-    <?php $args = array(
-	'walker'            => null,
-	'max_depth'         => '',
-	'style'             => 'ul',
-	'callback'          => null,
-	'end-callback'      => null,
-	'type'              => 'all',
-	'reply_text'        => 'Reply',
-	'page'              => '',
-	'per_page'          => '',
-	'avatar_size'       => 80,
-	'reverse_top_level' => null,
-	'reverse_children'  => '',
-	'format'            => 'html5', // or 'xhtml' if no 'HTML5' theme support
-	'short_ping'        => false,   // @since 3.6
-        'echo'              => true     // boolean, default is true
-); ?>
+<div class="comments-wrapper">
 
-<?php 
-wp_list_comments($args, $comments);
 
-$comments_args = array(
-    // change the title of send button 
-    'label_submit'=>'Send',
-    // change the title of the reply section
-    'title_reply'=>'Write a Reply or Comment',
-    // remove "Text or HTML to be displayed after the set of comment fields"
-    'comment_notes_after' => '',
-    // redefine your own textarea (the comment body)
-    'comment_field' => '<p class="comment-form-comment"><label for="comment">' . _x( 'Comment', 'noun' ) . '</label><br /><textarea id="comment" name="comment" aria-required="true"></textarea></p>',
-);
+    <div class="comments" id="comments">
 
-comment_form($comments_args);
 
-?>
+        <div class="comments-header">
+
+            <h2 class="comment-reply-title">
+                <?php
+                    if(!have_comments()){
+                        echo "Leave a comment";
+                    }else{
+                        echo  get_comments_number() . " Comments";
+                    }
+                ?>
+            </h2><!-- .comments-title -->
+
+        </div><!-- .comments-header -->
+
+        <div class="comments-inner">
+            <?php
+            wp_list_comments(
+                array(
+                    'avatar_size' => 120,
+                    'style' => 'div'
+                )
+            );
+            ?>
+        </div><!-- .comments-inner -->
+
+    </div><!-- comments -->
+
+    <hr class="" aria-hidden="true">
+    <?php
+    if(comments_open()){
+        comment_form(
+            array(
+                'calss_form' => '',
+                'title_reply_before' => '<h2 id="reply-title" class"comment-reply-title">',
+                'title_reply_after' => '</h2>'
+            )
+        );
+    }
+    ?>
+
 </div>

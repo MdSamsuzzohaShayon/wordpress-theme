@@ -1,48 +1,79 @@
 <!DOCTYPE html>
-<html <?php language_attributes(); ?>>
-  <head>
-    <meta charset="<?php bloginfo('charset'); ?>">
+<html lang="en">
+<head>
+    <!--    <title>Blog Site Template</title>-->
+    <!-- Meta -->
+    <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
-    <meta name="description" content="<?php bloginfo('description'); ?>">
-    <title>
-      <?php bloginfo('name'); ?> |
-      <?php is_front_page() ? bloginfo('description') : wp_title(); ?>
-    </title>
-    <!-- Bootstrap core CSS -->
-    <link href="<?php bloginfo('template_url'); ?>/css/bootstrap.css" rel="stylesheet">
-    <!-- Custom styles for this template -->
-    <link href="<?php bloginfo('stylesheet_url'); ?>" rel="stylesheet">
-    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet">
-    <?php wp_head(); ?>
-  </head>
-  <body>
-    <!-- FOR CREATING MENU OF BOOTSTRAP AND WORDPRESS FOLLOW https://github.com/wp-bootstrap/wp-bootstrap-navwalker -->
-    <nav class="navbar navbar-expand-md navbar-dark bg-dark" role="navigation">
-      <div class="container">
-      <!-- Brand and toggle get grouped for better mobile display -->
-      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-controls="bs-example-navbar-collapse-1" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <a class="navbar-brand" href="#"><?php add_theme_support( 'custom-logo' ); ?></a>
-        <?php
-        wp_nav_menu( array(
-          'theme_location'    => 'primary',
-          'depth'             => 2,
-          'container'         => 'div',
-          'container_class'   => 'collapse navbar-collapse',
-          'container_id'      => 'bs-example-navbar-collapse-1',
-          'menu_class'        => 'nav navbar-nav',
-          'fallback_cb'       => 'WP_Bootstrap_Navwalker::fallback',
-          'walker'            => new WP_Bootstrap_Navwalker(),
-        ) );
-        ?>
-      </div>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Blog Site Template">
+    <meta name="author" content="https://youtube.com/FollowAndrew">
+    <link rel="shortcut icon" href="images/logo.png">
+    <?php
+    wp_head();
+    ?>
+</head>
+
+<body>
+
+<header class="header text-center">
+    <a class="site-title pt-lg-4 mb-0" href="index.html">
+        <?php get_bloginfo() ?>
+    </a>
+
+    <nav class="navbar navbar-expand-lg navbar-dark">
+
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navigation"
+                aria-controls="navigation" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div id="navigation" class="collapse navbar-collapse flex-column">
+            <?php
+                if(function_exists('the_custom_logo')){
+//                    the_custom_logo();
+//                    https://developer.wordpress.org/reference/functions/get_theme_mod/
+                    $custom_logo_id = get_theme_mod('custom_logo');
+                    echo  $custom_logo_id;
+//                    https://developer.wordpress.org/reference/functions/wp_get_attachment_image_src/
+                    $logo = wp_get_attachment_image_src($custom_logo_id);
+                    print_r( $logo);
+                    echo $logo;
+                }
+            ?>
+            <img class="mb-3 mx-auto logo" src="<?php echo $logo; ?>" alt="logo">
+
+            <?php
+//            https://developer.wordpress.org/reference/functions/wp_nav_menu/
+            wp_nav_menu(
+                array(
+                    "menu" => "primary",
+                    "container" => '',
+                    'theme_location' => 'primary',
+                    'items_wrap' => '<ul id="" class="navbar-nav flex-column text-sm-center text-md-left">%3$s</ul>'
+                )
+            );
+            ?>
+
+
+            <hr>
+<!--            <ul class="social-list list-inline py-3 mx-auto">-->
+<!--               -->
+<!--            </ul>-->
+            <?php
+                dynamic_sidebar('sidebar-1');
+            ?>
+
+        </div>
+
+
     </nav>
 
-    <div class="container">
-      <div class="blog-header">
-        <h1 class="blog-title"><?php bloginfo('name'); ?></h1>
-        <p class="lead blog-description"><?php bloginfo('description'); ?></p>
-      </div>
+</header>
+
+<div class="main-wrapper">
+    <header class="page-title theme-bg-light text-center gradient py-5">
+        <!--        https://developer.wordpress.org/reference/functions/page/2/-->
+        <!--        https://developer.wordpress.org/?s=the_title-->
+        <h1 class="heading"><?php the_title(); ?></h1>
+    </header>
