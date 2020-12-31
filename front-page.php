@@ -4,6 +4,7 @@
 //CREATING VARIABLE
 $title = get_field('page_title');
 $description = get_field('descriptions');
+$other_descriptions = get_field('other_descriptions');
 ?>
 
 
@@ -35,6 +36,11 @@ $description = get_field('descriptions');
 
             <?php if ($description): ?>
                 <?php echo nl2br($description); ?>
+            <?php endif; ?>
+
+
+            <?php if ($other_descriptions): ?>
+                <?php echo $other_descriptions; ?>
             <?php endif; ?>
 
 
