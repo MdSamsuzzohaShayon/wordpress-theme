@@ -7,6 +7,9 @@ $image = get_field('featured_image');
 $picture = $image['sizes']['my_custom_size'];
 $alt = $image['alt'];
 $title = $image['title'];
+$file = get_field('upload_a_file');
+$filename = $file['filename'];
+$fileurl = $file['url'];
 
 
 ?>
@@ -39,6 +42,15 @@ $title = $image['title'];
                 <?php var_dump($image); ?>
             <?php endif; ?>
 
+
+            <!--            DOWNLOAD FILE-->
+            <hr>
+            <br><br>
+            <h3>File </h3>
+            <?php if ($file): ?>
+                <?php var_dump($file); ?>
+                <a href="<?php echo $fileurl ?>" download><?php echo $filename; ?></a>
+            <?php endif; ?>
 
         </div>
     </section>
