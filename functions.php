@@ -35,3 +35,6 @@ add_theme_support( 'post-thumbnails' );
 
 // Image Sizes
 add_image_size('small', 600, 600, false);
+
+//CUSTOM IMAGE SIZE
+add_image_size('my_custom_size', 1200, 300, true);  // TRUE FOR CROP

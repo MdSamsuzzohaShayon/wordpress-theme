@@ -5,6 +5,7 @@
 $title = get_field('page_title');
 $description = get_field('descriptions');
 $other_descriptions = get_field('other_descriptions');
+$my_input = get_field('my_input');
 ?>
 
 
@@ -23,6 +24,7 @@ $other_descriptions = get_field('other_descriptions');
 
             <!--        page_title         GET THIS ID FROM WORDPRESS DASHBOARD -> CUSTOM FILEDS -> FILED GROUP -> NAME IS THE ID HERE -->
             <?php
+
             //                FIRST WAY OF SHOWING TITLE
             //                the_field("page_title");
 
@@ -34,14 +36,27 @@ $other_descriptions = get_field('other_descriptions');
             ?>
 
 
+<!--            TEXT AREA -->
             <?php if ($description): ?>
                 <?php echo nl2br($description); ?>
             <?php endif; ?>
 
 
+
+<!--            WYSIWG EDITOR -->
             <?php if ($other_descriptions): ?>
                 <?php echo $other_descriptions; ?>
             <?php endif; ?>
+
+
+            <!--            NUMBER FIELD / RANGE / EMAIL -->
+            <?php if ($my_input): ?>
+<!--                --><?php //echo var_dump((int)$my_input); ?>
+
+            <?php echo $my_input; ?>
+            <?php endif; ?>
+
+
 
 
         </div>
