@@ -12,6 +12,8 @@ $filename = $file['filename'];
 $fileurl = $file['url'];
 
 
+$embed = get_field('embed_a_video');
+
 ?>
 
 
@@ -49,7 +51,21 @@ $fileurl = $file['url'];
             <h3>File </h3>
             <?php if ($file): ?>
                 <?php var_dump($file); ?>
+                <br>
                 <a href="<?php echo $fileurl ?>" download><?php echo $filename; ?></a>
+            <?php endif; ?>
+
+
+
+            <!--            EMBED A VIDEO-->
+            <hr>
+            <br><br>
+            <h3>Video Embed </h3>
+<!--            https://wordpress.org/support/article/embeds/-->
+            <?php if ($embed): ?>
+                <?php var_dump($file); ?>
+                <br>
+            <?php echo $embed; ?>
             <?php endif; ?>
 
         </div>
