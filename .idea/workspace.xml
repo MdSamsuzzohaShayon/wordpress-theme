@@ -2,9 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="8f539fe9-8d90-48b6-9494-ff1bbfb8df8b" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/gallery.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/template-parts/image-gallery.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/.~lock.Instructions.odt#" beforeDir="false" afterPath="$PROJECT_DIR$/docs/.~lock.Instructions.odt#" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/template-contentpage.php" beforeDir="false" afterPath="$PROJECT_DIR$/template-contentpage.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -43,7 +43,8 @@
       <workItem from="1609276758096" duration="64000" />
       <workItem from="1609373900505" duration="5854000" />
       <workItem from="1609477437722" duration="806000" />
-      <workItem from="1609478606480" duration="1598000" />
+      <workItem from="1609478606480" duration="3442000" />
+      <workItem from="1609548730835" duration="2268000" />
     </task>
     <servers />
   </component>
