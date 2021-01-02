@@ -14,3 +14,10 @@
 
  - Change style for paragraph font size - make custom value in block (right sidebar)
 
+#### Custom block
+ 
+ - To create a custom block we need to registerBlockType using JavaScript -> How to Create a Custom BlockHow to Create a Custom Block
+ - 
+
+ ![screenshot](screenshots/wpgb-3.png)
+

@@ -2,9 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="8f539fe9-8d90-48b6-9494-ff1bbfb8df8b" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/js/gutenberg-cta-block.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/inc/gutenberg.php" beforeDir="false" afterPath="$PROJECT_DIR$/inc/gutenberg.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -59,6 +58,8 @@
       <workItem from="1609478606480" duration="3442000" />
       <workItem from="1609548730835" duration="4084000" />
       <workItem from="1609553983855" duration="4902000" />
+      <workItem from="1609583505154" duration="298000" />
+      <workItem from="1609583939967" duration="296000" />
     </task>
     <servers />
   </component>
