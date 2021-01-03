@@ -1,6 +1,9 @@
 const {registerBlockType} = wp.blocks;
 // https://developer.wordpress.org/block-editor/developers/richtext/
-const {RichText} = wp.editor;
+// https://developer.wordpress.org/block-editor/tutorials/block-tutorial/block-controls-toolbar-and-sidebar/#inspector
+
+const {RichText, InspectorControls, ColorPalette} = wp.editor;
+const {PanelBody} = wp.components;
 
 
 function setAttributes(param) {
@@ -32,6 +35,12 @@ registerBlockType('shayon/custom-cta', {
             source: 'html',
             selector: 'h2'
         },
+        // https://developer.wordpress.org/block-editor/components/color-palette/
+        titleColor: {
+            type: 'string',
+            default: 'black',
+
+        },
         body: {
             type: 'string',
             source: "html",
@@ -46,13 +55,16 @@ registerBlockType('shayon/custom-cta', {
     // https://developer.wordpress.org/block-editor/developers/block-api/block-edit-save/
     // The edit function describes the structure of your block in the context of the editor. This represents what the editor will render when the block is used.
     edit({attributes, setAttributes}) {
-        const {title, body} = attributes;
+        const {title, body, titleColor} = attributes;
 
         function onChangeTitle(newTitle) {
             setAttributes({title: newTitle});
         }
         function onChangeBody(newBody) {
             setAttributes({body: newBody});
+        }
+        function onTitleColorChange(newColor){
+            setAttributes({titleColor: newColor});
         }
         /*
         function updateAuthor(e) {
@@ -66,31 +78,44 @@ registerBlockType('shayon/custom-cta', {
         // JSX
         // return <input value={attributes.author} onChange={updateAuthor} type="text"/>;
         return ([
+            <InspectorControls style={{marginBottom: '40px'}}>
+                <PanelBody title={'Font Color Settings'}>
+                    <p><strong>Select a title color</strong></p>
+                    <ColorPalette
+                        value={titleColor}
+                        onChange={onTitleColorChange}
+                    />
+
+                </PanelBody>
+            </InspectorControls>,
+
             <div className="cta-container">
-                <RichText
-                    key="editable"
-                    tagName='h2'
-                    placeholder="You cta title"
-                    value={title}
-                    onChange={onChangeTitle}
-                />
-                <RichText
-                    key="editable"
-                    tagName='p'
-                    placeholder="You cta descriptions"
-                    value={body}
-                    onChange={onChangeBody}
-                />
-            </div>
+                    <RichText
+                        key="editable"
+                        tagName='h2'
+                        placeholder="You cta title"
+                        value={title}
+                        onChange={onChangeTitle}
+                        style={{color: titleColor}}
+                    />
+                    <RichText
+                        key="editable"
+                        tagName='p'
+                        placeholder="You cta descriptions"
+                        value={body}
+                        onChange={onChangeBody}
+                    />
+                </div>
+
         ]);
     },
 
     save({attributes}) {
-        const {title, body} = attributes;
+        const {title, body, titleColor} = attributes;
         // return <p>Author Name <i>{attributes.author}</i></p>;
         return (
             <div className="cta-container">
-                <h2>{title}</h2>
+                <h2 style={{color: titleColor}}>{title}</h2>
                 <RichText.Content
                     tagName='p'
                     value={body}

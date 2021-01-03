@@ -99,8 +99,13 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _wordpress_element__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_wordpress_element__WEBPACK_IMPORTED_MODULE_0__);
 
 var registerBlockType = wp.blocks.registerBlockType; // https://developer.wordpress.org/block-editor/developers/richtext/
+// https://developer.wordpress.org/block-editor/tutorials/block-tutorial/block-controls-toolbar-and-sidebar/#inspector
 
-var RichText = wp.editor.RichText;
+var _wp$editor = wp.editor,
+    RichText = _wp$editor.RichText,
+    InspectorControls = _wp$editor.InspectorControls,
+    ColorPalette = _wp$editor.ColorPalette;
+var PanelBody = wp.components.PanelBody;
 
 function setAttributes(param) {} // https://developer.wordpress.org/block-editor/developers/block-api/block-registration/
 
@@ -126,6 +131,11 @@ registerBlockType('shayon/custom-cta', {
       source: 'html',
       selector: 'h2'
     },
+    // https://developer.wordpress.org/block-editor/components/color-palette/
+    titleColor: {
+      type: 'string',
+      default: 'black'
+    },
     body: {
       type: 'string',
       source: "html",
@@ -140,7 +150,8 @@ registerBlockType('shayon/custom-cta', {
     var attributes = _ref.attributes,
         setAttributes = _ref.setAttributes;
     var title = attributes.title,
-        body = attributes.body;
+        body = attributes.body,
+        titleColor = attributes.titleColor;
 
     function onChangeTitle(newTitle) {
       setAttributes({
@@ -153,6 +164,12 @@ registerBlockType('shayon/custom-cta', {
         body: newBody
       });
     }
+
+    function onTitleColorChange(newColor) {
+      setAttributes({
+        titleColor: newColor
+      });
+    }
     /*
     function updateAuthor(e) {
         console.log(e.target.value);
@@ -163,14 +180,26 @@ registerBlockType('shayon/custom-cta', {
     // return <input value={attributes.author} onChange={updateAuthor} type="text"/>;
 
 
-    return [Object(_wordpress_element__WEBPACK_IMPORTED_MODULE_0__["createElement"])("div", {
+    return [Object(_wordpress_element__WEBPACK_IMPORTED_MODULE_0__["createElement"])(InspectorControls, {
+      style: {
+        marginBottom: '40px'
+      }
+    }, Object(_wordpress_element__WEBPACK_IMPORTED_MODULE_0__["createElement"])(PanelBody, {
+      title: 'Font Color Settings'
+    }, Object(_wordpress_element__WEBPACK_IMPORTED_MODULE_0__["createElement"])("p", null, Object(_wordpress_element__WEBPACK_IMPORTED_MODULE_0__["createElement"])("strong", null, "Select a title color")), Object(_wordpress_element__WEBPACK_IMPORTED_MODULE_0__["createElement"])(ColorPalette, {
+      value: titleColor,
+      onChange: onTitleColorChange
+    }))), Object(_wordpress_element__WEBPACK_IMPORTED_MODULE_0__["createElement"])("div", {
       className: "cta-container"
     }, Object(_wordpress_element__WEBPACK_IMPORTED_MODULE_0__["createElement"])(RichText, {
       key: "editable",
       tagName: "h2",
       placeholder: "You cta title",
       value: title,
-      onChange: onChangeTitle
+      onChange: onChangeTitle,
+      style: {
+        color: titleColor
+      }
     }), Object(_wordpress_element__WEBPACK_IMPORTED_MODULE_0__["createElement"])(RichText, {
       key: "editable",
       tagName: "p",
@@ -182,11 +211,16 @@ registerBlockType('shayon/custom-cta', {
   save: function save(_ref2) {
     var attributes = _ref2.attributes;
     var title = attributes.title,
-        body = attributes.body; // return <p>Author Name <i>{attributes.author}</i></p>;
+        body = attributes.body,
+        titleColor = attributes.titleColor; // return <p>Author Name <i>{attributes.author}</i></p>;
 
     return Object(_wordpress_element__WEBPACK_IMPORTED_MODULE_0__["createElement"])("div", {
       className: "cta-container"
-    }, Object(_wordpress_element__WEBPACK_IMPORTED_MODULE_0__["createElement"])("h2", null, title), Object(_wordpress_element__WEBPACK_IMPORTED_MODULE_0__["createElement"])(RichText.Content, {
+    }, Object(_wordpress_element__WEBPACK_IMPORTED_MODULE_0__["createElement"])("h2", {
+      style: {
+        color: titleColor
+      }
+    }, title), Object(_wordpress_element__WEBPACK_IMPORTED_MODULE_0__["createElement"])(RichText.Content, {
       tagName: "p",
       value: body
     }));
