@@ -114,9 +114,11 @@ registerBlockType('shayon/custom-cta', {
   // The edit function describes the structure of your block in the context of the editor. This represents what the editor will render when the block is used.
   edit: function edit() {
     // JSX
-    return Object(_wordpress_element__WEBPACK_IMPORTED_MODULE_0__["createElement"])("div", null, "Edited");
+    return Object(_wordpress_element__WEBPACK_IMPORTED_MODULE_0__["createElement"])("p", null, "Custom CTA Block");
   },
-  save: function save() {}
+  save: function save() {
+    return Object(_wordpress_element__WEBPACK_IMPORTED_MODULE_0__["createElement"])("div", null, "Custom CTA Block");
+  }
 });
 
 /***/ }),
