@@ -98,7 +98,10 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _wordpress_element__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @wordpress/element */ "@wordpress/element");
 /* harmony import */ var _wordpress_element__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_wordpress_element__WEBPACK_IMPORTED_MODULE_0__);
 
-var registerBlockType = wp.blocks.registerBlockType; // https://developer.wordpress.org/block-editor/developers/block-api/block-registration/
+var registerBlockType = wp.blocks.registerBlockType;
+
+function setAttributes(param) {} // https://developer.wordpress.org/block-editor/developers/block-api/block-registration/
+
 
 registerBlockType('shayon/custom-cta', {
   // BUILT-IN ATTRIBUTES
@@ -107,17 +110,38 @@ registerBlockType('shayon/custom-cta', {
   icon: 'format-image',
   category: 'layout',
   // CUSTOM ATTRIBUTES
-  attributes: {},
+  // https://developer.wordpress.org/block-editor/developers/block-api/block-attributes/
+  attributes: {
+    // https://developer.wordpress.org/block-editor/developers/block-api/block-attributes/#meta
+    author: {
+      type: ''
+    }
+  },
   // CUSTOM FUNCTIONS
   // BUILT-IN FUNCTION
   // https://developer.wordpress.org/block-editor/developers/block-api/block-edit-save/
   // The edit function describes the structure of your block in the context of the editor. This represents what the editor will render when the block is used.
-  edit: function edit() {
-    // JSX
-    return Object(_wordpress_element__WEBPACK_IMPORTED_MODULE_0__["createElement"])("p", null, "Custom CTA Block");
+  edit: function edit(_ref) {
+    var attributes = _ref.attributes,
+        setAttributes = _ref.setAttributes;
+
+    function updateAuthor(e) {
+      console.log(e.target.value);
+      setAttributes({
+        author: e.target.value
+      });
+    } // JSX
+
+
+    return Object(_wordpress_element__WEBPACK_IMPORTED_MODULE_0__["createElement"])("input", {
+      value: attributes.author,
+      onChange: updateAuthor,
+      type: "text"
+    });
   },
-  save: function save() {
-    return Object(_wordpress_element__WEBPACK_IMPORTED_MODULE_0__["createElement"])("div", null, "Custom CTA Block");
+  save: function save(_ref2) {
+    var attributes = _ref2.attributes;
+    return Object(_wordpress_element__WEBPACK_IMPORTED_MODULE_0__["createElement"])("p", null, "Author Name ", Object(_wordpress_element__WEBPACK_IMPORTED_MODULE_0__["createElement"])("i", null, attributes.author));
   }
 });
 

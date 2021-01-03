@@ -41,3 +41,12 @@
 
  - Use th command to run the script
 
+
+#### Attributes
+
+ - In gutenberg we will face the problem below again and again because of save return and dit return doesn't match
+
+ ![screenshot](screenshots/wpgb-4.png)
+
+ - Know more about this error inspect element and checkout console . Delete the block and make it once again so it will disappear  
+
