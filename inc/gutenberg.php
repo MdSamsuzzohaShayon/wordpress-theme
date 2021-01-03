@@ -60,7 +60,7 @@ add_action('init', 'shayon_gurenberg_default_colors');
 function shayon_gutenberg_blocks(){
 //    https://developer.wordpress.org/reference/functions/wp_register_script/
 //    Registers a script to be enqueued later using the wp_enqueue_script() function.
-    wp_register_script('custom-cta-js', get_template_directory_uri() . '/js/gutenberg-cta-block.js', array('wp-blocks'));
+    wp_register_script('custom-cta-js', get_template_directory_uri() . '/build/index.js', array('wp-blocks'));
 //    https://developer.wordpress.org/reference/functions/register_block_type/
 //    Registers a block type.
     register_block_type(

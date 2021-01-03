@@ -21,3 +21,18 @@
 
  ![screenshot](screenshots/wpgb-3.png)
 
+#### NPM Build
+
+ - Create new **package.json** and Install wordpress scripts 
+
+ ```npm install --save-dev --save-exact @wordpress/scripts```
+
+ - Script setup for wordpress script in **package.json** . 
+
+```"build:scripts": "wp-scripts build",```
+
+ - Create two more folders build the file **build** and **src* . inside src there will be our **index.js** file
+
+```npm run build```
+
+
