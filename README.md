@@ -48,5 +48,14 @@
 
  ![screenshot](screenshots/wpgb-4.png)
 
- - Know more about this error inspect element and checkout console . Delete the block and make it once again so it will disappear  
+ - Know more about this error inspect element and checkout console . Delete the block and make it once again, so it will disappear 
+
+
+
+#### Color Palette
+
+ - Select text and from block panel of setting there will be custom color options
+
+ ![screenshot](screenshots/wpgb-5.png)
+
 
