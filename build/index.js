@@ -98,7 +98,9 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _wordpress_element__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @wordpress/element */ "@wordpress/element");
 /* harmony import */ var _wordpress_element__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_wordpress_element__WEBPACK_IMPORTED_MODULE_0__);
 
-var registerBlockType = wp.blocks.registerBlockType;
+var registerBlockType = wp.blocks.registerBlockType; // https://developer.wordpress.org/block-editor/developers/richtext/
+
+var RichText = wp.editor.RichText;
 
 function setAttributes(param) {} // https://developer.wordpress.org/block-editor/developers/block-api/block-registration/
 
@@ -113,8 +115,21 @@ registerBlockType('shayon/custom-cta', {
   // https://developer.wordpress.org/block-editor/developers/block-api/block-attributes/
   attributes: {
     // https://developer.wordpress.org/block-editor/developers/block-api/block-attributes/#meta
+
+    /*
     author: {
-      type: ''
+        type: ''
+     },
+     */
+    title: {
+      type: 'string',
+      source: 'html',
+      selector: 'h2'
+    },
+    body: {
+      type: 'string',
+      source: "html",
+      selector: 'p'
     }
   },
   // CUSTOM FUNCTIONS
@@ -124,24 +139,57 @@ registerBlockType('shayon/custom-cta', {
   edit: function edit(_ref) {
     var attributes = _ref.attributes,
         setAttributes = _ref.setAttributes;
+    var title = attributes.title,
+        body = attributes.body;
 
-    function updateAuthor(e) {
-      console.log(e.target.value);
+    function onChangeTitle(newTitle) {
       setAttributes({
-        author: e.target.value
+        title: newTitle
       });
-    } // JSX
+    }
+
+    function onChangeBody(newBody) {
+      setAttributes({
+        body: newBody
+      });
+    }
+    /*
+    function updateAuthor(e) {
+        console.log(e.target.value);
+        setAttributes({author: e.target.value});
+    }
+     */
+    // JSX
+    // return <input value={attributes.author} onChange={updateAuthor} type="text"/>;
 
 
-    return Object(_wordpress_element__WEBPACK_IMPORTED_MODULE_0__["createElement"])("input", {
-      value: attributes.author,
-      onChange: updateAuthor,
-      type: "text"
-    });
+    return [Object(_wordpress_element__WEBPACK_IMPORTED_MODULE_0__["createElement"])("div", {
+      className: "cta-container"
+    }, Object(_wordpress_element__WEBPACK_IMPORTED_MODULE_0__["createElement"])(RichText, {
+      key: "editable",
+      tagName: "h2",
+      placeholder: "You cta title",
+      value: title,
+      onChange: onChangeTitle
+    }), Object(_wordpress_element__WEBPACK_IMPORTED_MODULE_0__["createElement"])(RichText, {
+      key: "editable",
+      tagName: "p",
+      placeholder: "You cta descriptions",
+      value: body,
+      onChange: onChangeBody
+    }))];
   },
   save: function save(_ref2) {
     var attributes = _ref2.attributes;
-    return Object(_wordpress_element__WEBPACK_IMPORTED_MODULE_0__["createElement"])("p", null, "Author Name ", Object(_wordpress_element__WEBPACK_IMPORTED_MODULE_0__["createElement"])("i", null, attributes.author));
+    var title = attributes.title,
+        body = attributes.body; // return <p>Author Name <i>{attributes.author}</i></p>;
+
+    return Object(_wordpress_element__WEBPACK_IMPORTED_MODULE_0__["createElement"])("div", {
+      className: "cta-container"
+    }, Object(_wordpress_element__WEBPACK_IMPORTED_MODULE_0__["createElement"])("h2", null, title), Object(_wordpress_element__WEBPACK_IMPORTED_MODULE_0__["createElement"])(RichText.Content, {
+      tagName: "p",
+      value: body
+    }));
   }
 });
 
