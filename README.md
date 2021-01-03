@@ -35,4 +35,9 @@
 
 ```npm run build```
 
+ - Add this script to continuously running and updating build files 
+   
+```    "start-build": "wp-scripts start"```
+
+ - Use th command to run the script
 
