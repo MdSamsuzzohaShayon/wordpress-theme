@@ -19,3 +19,21 @@ $secondary: $secondary-color-1;
     font-size: 0.7rem;
   }
 }
+
+
+.landing-main-menu{
+  width: 100%;
+  min-height: 100vh;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  .main-menu{
+    background-color: $secondary-color-2;
+    a{
+      //font-family: 'Bebas Neue', cursive;
+      font-family: 'Bellefair', serif;
+      //font-weight: 300;
+      font-size: 1.2rem;
+    }
+  }
+}

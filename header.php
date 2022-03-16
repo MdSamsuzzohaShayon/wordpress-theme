@@ -49,8 +49,8 @@
     </header>
 
     <!--    Start landing-->
-    <div class="landing-main-menu">
-        <div class="main-menu">
+    <div class="landing-main-menu" style="background-image: url(<?php echo get_template_directory_uri(); ?>/assets/img/default-bg.jpg);">
+        <div class="main-menu container-fluid">
             <div class="container">
                 <!--        main navbar start -->
                 <div class="d-flex flex-wrap align-items-center justify-content-center justify-content-md-between py-3 mb-4 bg-transparent">
@@ -71,12 +71,20 @@
 
 
                     <ul class="nav col-12 col-md-auto mb-2 justify-content-center mb-md-0">
-                        <li><a href="#" class="nav-link px-2 link-secondary">Home</a></li>
-                        <li><a href="#" class="nav-link px-2 link-dark">Features</a></li>
-                        <li><a href="#" class="nav-link px-2 link-dark">Pricing</a></li>
-                        <li><a href="#" class="nav-link px-2 link-dark">FAQs</a></li>
-                        <li><a href="#" class="nav-link px-2 link-dark">About</a></li>
+                        <li><a href="#" class="nav-link px-2 text-white text-uppercase">Features</a></li>
+                        <li><a href="#" class="nav-link px-2 text-white text-uppercase">Pricing</a></li>
+                        <li><a href="#" class="nav-link px-2 text-white text-uppercase">FAQs</a></li>
+                        <li><a href="#" class="nav-link px-2 text-white text-uppercase">About</a></li>
                     </ul>
+                    <?php
+                    wp_nav_menu( array(
+                        'theme_location' => 'main_menu',
+                        'container' => 'ul',
+                        'menu_class'=> 'nav col-12 col-md-auto mb-2 justify-content-center mb-md-0',
+                        'add_li_class'  => '',
+                        'add_a_class'  => 'nav-link px-2 text-white text-uppercase',
+                    ) );
+                    ?>
 
                     <div class="col-md-3 text-end">
                         <button type="button" class="btn btn-outline-primary me-2">Login</button>

@@ -47,14 +47,9 @@ add_action("wp_enqueue_scripts", "thesportworship_enqueue_script");
 
 
 
-function thesportworship_register_menus(){
-    register_nav_menus( array(
-        'top_menu' => __( 'Top Menu', 'thesportworship' ),
-        'primary_menu'  => __( 'Main Menu', 'thesportworship' ),
-        'footer_menu'  => __( 'Footer Menu', 'thesportworship' ),
-    ) );
-}
-add_action( 'after_setup_theme', 'thesportworship_register_menus', 0 );
+
+// MAIN MENU WITH FILTERS - main-menu-filter-register
+require_once(get_template_directory() . "/inc/menu-registration-filter.php");
 
 
 // require_once(get_template_directory() . "/inc/customize-author-detail.php");
@@ -64,9 +59,6 @@ add_action( 'after_setup_theme', 'thesportworship_register_menus', 0 );
 
 
 require_once(get_template_directory() . "/inc/top-menu-walker-class.php");
-
-// MAIN MENU WITH FILTERS - main-menu-filter-register
-require_once(get_template_directory() . "/inc/main-menu-filter-register.php");
 
 
 require_once(get_template_directory() . "/inc/customize-menu-position.php");
