@@ -3,6 +3,9 @@
 
 $error: $error-color-1;
 $secondary: $secondary-color-1;
+$container-max-widths: (
+        xxl: 1480px
+);
 @import "../bootstrap/scss/bootstrap.scss";
 
 // Then add additional custom code here

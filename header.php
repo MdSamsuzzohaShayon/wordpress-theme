@@ -49,7 +49,8 @@
     </header>
 
     <!--    Start landing-->
-    <div class="landing-main-menu" style="background-image: url(<?php echo get_template_directory_uri(); ?>/assets/img/default-bg.jpg);">
+    <div class="landing-main-menu" style="background-image: url(<?php header_image(); ?>);">
+
         <div class="main-menu container-fluid">
             <div class="container">
                 <!--        main navbar start -->
@@ -68,14 +69,6 @@
                         ?>
                     </a>
 
-
-
-                    <ul class="nav col-12 col-md-auto mb-2 justify-content-center mb-md-0">
-                        <li><a href="#" class="nav-link px-2 text-white text-uppercase">Features</a></li>
-                        <li><a href="#" class="nav-link px-2 text-white text-uppercase">Pricing</a></li>
-                        <li><a href="#" class="nav-link px-2 text-white text-uppercase">FAQs</a></li>
-                        <li><a href="#" class="nav-link px-2 text-white text-uppercase">About</a></li>
-                    </ul>
                     <?php
                     wp_nav_menu( array(
                         'theme_location' => 'main_menu',
@@ -94,4 +87,3 @@
                 <!--        main navbar end -->
             </div>
         </div>
-        <div class="landing">Caption goes</div>
