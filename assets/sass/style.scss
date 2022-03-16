@@ -1,0 +1,21 @@
+@import "variables";
+// Include any default variable overrides here (though functions won't be available)
+
+$error: $error-color-1;
+$secondary: $secondary-color-1;
+@import "../bootstrap/scss/bootstrap.scss";
+
+// Then add additional custom code here
+.top-menu, .top-navbar{
+  height: 35px;
+  .nav-link, .navbar-text{
+    color: white;
+    font-size: 0.8rem;
+    font-family: 'Bellefair', serif;
+    //font-family: 'Bebas Neue', cursive;
+  }
+  .top-menu-icon{
+    color: $error-color-1;
+    font-size: 0.7rem;
+  }
+}
