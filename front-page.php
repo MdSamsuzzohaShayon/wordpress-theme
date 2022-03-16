@@ -18,6 +18,8 @@
 </main>
 <!-- MAIN SECTION ENDS  -->
 
+</div>
+<!--    End landing-->
 
 </div>
 <!--

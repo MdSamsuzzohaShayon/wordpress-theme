@@ -6,6 +6,16 @@ if ( function_exists( 'add_theme_support' ) ) {
     add_theme_support('title-tag');
     add_theme_support( 'post-thumbnails', array( 'carousel' ) );
     set_post_thumbnail_size( 150, 150, true ); // default Featured Image dimensions (cropped)
+    add_theme_support( 'custom-logo', array(
+        'height' => 40,
+        'width' => 100,
+        'flex-height'          => true,
+        'flex-width'           => true,
+    ));
+
+
+
+
 
     // additional image sizes
     // delete the next line if you do not need additional image sizes
@@ -58,7 +68,7 @@ require_once(get_template_directory() . "/inc/top-menu-walker-class.php");
 // MAIN MENU WITH FILTERS - main-menu-filter-register
 require_once(get_template_directory() . "/inc/main-menu-filter-register.php");
 
-// Customize logo and menu position
+
 require_once(get_template_directory() . "/inc/customize-menu-position.php");
 
 require_once(get_template_directory() . "/inc/customize-header-caption.php");
