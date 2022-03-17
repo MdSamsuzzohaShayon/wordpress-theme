@@ -19,7 +19,9 @@ if ( function_exists( 'add_theme_support' ) ) {
 
     // additional image sizes
     // delete the next line if you do not need additional image sizes
-    add_image_size( 'category-thumb', 300, 9999 ); // 300 pixels wide (and unlimited height)
+    add_image_size( 'category-thumb', 800, 99999999 ); // 300 pixels wide (and unlimited height)
+    add_image_size( 'sport-large', 800, 400, false );
+    add_image_size( 'sport-small', 300, 200, true );
     add_theme_support('custom-header', array(
         "default-image" => get_template_directory_uri() . '/assets/img/default-bg.jpg'  ,
         'default-text-color' => 'white',

@@ -1,10 +1,10 @@
 <?php get_header(); ?>
 <div class="container">
-    <h2>This is archive.php</h2>
+    <h1>Cricket.php</h1>
     <h2><?php echo single_cat_title(); ?></h2>
     <?php get_template_part("template-parts/content", 'archive'); ?>
 
-<!--    Pagination-->
+    <!--    Pagination-->
     <?php //previous_posts_link(); ?>
     <?php //next_posts_link(); ?>
     <br>
@@ -19,6 +19,7 @@
         'total' => $wp_query->max_num_pages
     ) );
     ?>
+
     <nav aria-label="Page navigation example">
         <ul class="pagination">
             <li class="page-item"><a class="page-link" href="#">Previous</a></li>
@@ -28,7 +29,6 @@
             <li class="page-item"><a class="page-link" href="#">Next</a></li>
         </ul>
     </nav>
-
 </div>
 
 <?php get_footer(); ?>

@@ -1,16 +1,11 @@
 <?php get_header(); ?>
 <div class="container">
+    <h1>Cricket.php</h1>
+    <?php get_template_part("template-parts/content", 'archive'); ?>
 
-    <?php if(has_post_thumbnail()): ?>
-<!--        sport-large size we have declared in our functions.php-->
-        <img src="<?php the_post_thumbnail_url('sport-large'); ?>" alt="" class="img-thumbnail">
-    <?php endif; ?>
-
-
-    <?php the_title(); ?>
-
-    <?php get_template_part("template-parts/content", 'blogpost'); ?>
-
+    <!--    Pagination-->
+    <?php //previous_posts_link(); ?>
+    <?php //next_posts_link(); ?>
     <br>
     <?php
     global $wp_query;
@@ -23,7 +18,6 @@
         'total' => $wp_query->max_num_pages
     ) );
     ?>
-    <?php wp_link_pages(); ?>
 </div>
 
 <?php get_footer(); ?>

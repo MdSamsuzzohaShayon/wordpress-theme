@@ -49,7 +49,7 @@
     </header>
 
     <!--    Start landing-->
-    <div class="landing-main-menu" style="background-image: url(<?php header_image(); ?>);">
+    <div class="landing-main-menu text-white" style="background-image: url(<?php header_image(); ?>);">
 
         <div class="main-menu container-fluid">
             <div class="container">

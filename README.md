@@ -7,3 +7,6 @@
  - [Customizer API for add option in customize](https://codex.wordpress.org/Theme_Customization_API) ([tutorial](https://www.youtube.com/watch?v=hZnWOxgX7A4&t=4s))
  - [Loads a template part into a template.](https://developer.wordpress.org/reference/functions/get_template_part/)
  - [Page template](https://developer.wordpress.org/themes/template-files-section/page-template-files/)
+ - [The Loop](https://developer.wordpress.org/themes/basics/the-loop/), [Using the Loop](https://codex.wordpress.org/The_Loop)
+ - [Pagination](https://developer.wordpress.org/themes/functionality/pagination/)
+ - 

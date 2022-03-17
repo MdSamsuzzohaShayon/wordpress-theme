@@ -1,7 +1,7 @@
 <?php get_header(); ?>
 <?php if (get_theme_mod('author-callout-display') == 'Yes') { ?>
     <div class="row row-padding author">
-        Getting this template
+        Getting About template
         <div class="col-6 author-image">
             <img src="<?php echo wp_get_attachment_url(get_theme_mod('author-callout-image')) ?>" alt="Author Image">
         </div>
