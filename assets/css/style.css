@@ -11090,6 +11090,10 @@ textarea.form-control-lg {
     display: none !important;
   }
 }
+body {
+  background-color: #232537;
+}
+
 .top-menu, .top-navbar {
   height: 35px;
 }
@@ -11114,6 +11118,14 @@ textarea.form-control-lg {
   background-color: rgba(45, 47, 65, 0.72);
 }
 .landing-main-menu .main-menu a {
+  font-family: "Bellefair", serif;
+  font-size: 1.2rem;
+}
+
+.default-page-landing .main-menu {
+  background-color: rgba(45, 47, 65, 0.72);
+}
+.default-page-landing .main-menu a {
   font-family: "Bellefair", serif;
   font-size: 1.2rem;
 }

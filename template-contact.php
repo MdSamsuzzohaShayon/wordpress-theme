@@ -5,7 +5,7 @@
 //Set default template to contact from page edit option
 ?>
 
-<?php get_header('secondary'); ?>
+<?php get_header(); ?>
 
 <div class="container">
     <?php the_title(); ?>

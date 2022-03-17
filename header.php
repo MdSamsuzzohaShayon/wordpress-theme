@@ -49,7 +49,7 @@
     </header>
 
     <!--    Start landing-->
-    <div class="landing-main-menu text-white" style="background-image: url(<?php header_image(); ?>);">
+    <div class="default-page-landing text-white">
 
         <div class="main-menu container-fluid">
             <div class="container">
@@ -80,8 +80,9 @@
                     ?>
 
                     <div class="col-md-3 text-end">
-                        <button type="button" class="btn btn-outline-primary me-2">Login</button>
-                        <button type="button" class="btn btn-primary">Sign-up</button>
+                        <form class="d-flex" id="search-menu-item">
+                            <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                        </form>
                     </div>
                 </div>
                 <!--        main navbar end -->

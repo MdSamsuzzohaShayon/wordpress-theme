@@ -9,6 +9,11 @@ $container-max-widths: (
 @import "../bootstrap/scss/bootstrap.scss";
 
 // Then add additional custom code here
+
+body{
+  background-color: $secondary-color-1;
+}
+
 .top-menu, .top-navbar{
   height: 35px;
   .nav-link, .navbar-text{
@@ -36,6 +41,16 @@ $container-max-widths: (
       //font-family: 'Bebas Neue', cursive;
       font-family: 'Bellefair', serif;
       //font-weight: 300;
+      font-size: 1.2rem;
+    }
+  }
+}
+
+.default-page-landing{
+  .main-menu{
+    background-color: $secondary-color-2;
+    a{
+      font-family: 'Bellefair', serif;
       font-size: 1.2rem;
     }
   }
