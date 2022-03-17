@@ -1,4 +1,12 @@
-<?php get_header(); ?>
+<?php
+/*
+ Template Name: Contact
+ */
+//Set default template to contact from page edit option
+?>
+
+<?php get_header('secondary'); ?>
+
 <div class="container">
     <?php the_title(); ?>
     <?php if(have_posts()): while(have_posts()) : the_post(); ?>
@@ -7,3 +15,4 @@
 </div>
 
 <?php get_footer(); ?>
+

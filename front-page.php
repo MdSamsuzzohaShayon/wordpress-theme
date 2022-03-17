@@ -6,15 +6,11 @@
 
 <!-- MAIN SECTION START  -->
 <main class="main-body background-transparent">
-    <div class="container">
-        <div class="row">
-            <div class="col-md-6 col-sm-12 text-white">
-                <h2 class="text-uppercase heading-caption"> TItle Title goes here</h2>
-                <p >Description</p>
-            </div>
+    <?php get_template_part('template-parts/content', 'caption'); ?>
 
-        </div>
-    </div>
+<!--    POST -->
+    <?php get_template_part('template-parts/content', 'post'); ?>
+
 </main>
 <!-- MAIN SECTION ENDS  -->
 
