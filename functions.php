@@ -57,8 +57,8 @@ add_action("wp_enqueue_scripts", "thesportworship_enqueue_script");
 require_once(get_template_directory() . "/inc/menu-registration-filter.php");
 
 
-// require_once(get_template_directory() . "/inc/customize-author-detail.php");
-// new TheSportWorship_Author_Customizer();
+ require_once(get_template_directory() . "/inc/customize-author-information.php");
+new TheSportWorship_Author_Customizer();
 
 
 
