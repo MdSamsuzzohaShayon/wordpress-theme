@@ -4,15 +4,19 @@
 
 
 
-<!-- MAIN SECTION START  -->
-<main class="main-body background-transparent">
-    <?php get_template_part('template-parts/content', 'caption'); ?>
+    <!-- MAIN SECTION START  -->
+    <main class="main-body background-transparent">
+        <?php get_template_part('template-parts/content', 'caption'); ?>
 
-<!--    POST -->
-    <?php get_template_part('template-parts/content', 'post'); ?>
 
-</main>
-<!-- MAIN SECTION ENDS  -->
+        <?php get_template_part('template-parts/segment', 'featurepost'); ?>
+
+
+    <!--    POST -->
+        <?php get_template_part('template-parts/content', 'post'); ?>
+
+    </main>
+    <!-- MAIN SECTION ENDS  -->
 
 </div>
 <!--    End landing-->

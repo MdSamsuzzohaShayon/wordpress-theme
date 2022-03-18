@@ -6,12 +6,31 @@ $secondary: $secondary-color-1;
 $container-max-widths: (
         xxl: 1480px
 );
+
+
+
+
+
 @import "../bootstrap/scss/bootstrap.scss";
+
+$utilities: map-merge(
+                $utilities,
+                (
+                        "text-shadow": (
+                                property: box-shadow,
+                                class: shadow,
+                                values: (
+                                        text: "2px 2px #ff0000"
+                                )
+                        ),
+                )
+);
+
 
 // Then add additional custom code here
 
 body{
-  background-color: $secondary-color-1;
+  background-color: $secondary-color-3;
 }
 
 .top-menu, .top-navbar{
@@ -44,7 +63,48 @@ body{
       font-size: 1.2rem;
     }
   }
+
+  .caption-main{
+    height: 590px;
+    font-family: 'Playfair Display', serif;
+    h2{
+      font-family: 'Bebas Neue', cursive;
+      font-size: 2.5rem;
+      font-weight: 700;
+    }
+    p{
+      font-size: 1rem;
+    }
+  }
+
+  .feature-post-segment{
+    height: 1170px;
+    overflow-y: hidden;
+    padding-top: 5%;
+    font-family: 'Playfair Display', serif;
+    .feature-post-shape{
+      height: 1170px;
+      background-image: linear-gradient( $secondary-color-1, $secondary-color-3);
+      transform: skewY(-$feature-skew);
+      .cat-features{
+        padding-top: 8%;
+        transform: skewY($feature-skew);
+        .cat-list-item{
+          height: 100px;
+          width: 100px;
+        }
+        h3{
+          color: $error-color-2;
+        }
+      }
+
+    }
+  }
 }
+
+
+
+
 
 .default-page-landing{
   .main-menu{
@@ -55,3 +115,5 @@ body{
     }
   }
 }
+
+

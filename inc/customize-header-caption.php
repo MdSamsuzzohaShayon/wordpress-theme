@@ -19,7 +19,7 @@ function thesportworship_customize_register($wp_customize){
         'label'      => __('Caption title', 'thesportworship'),
         'section'    => 'thosportworship_caption_section',
         'settings'   => 'thesportworship_caption_title_setting',
-        'type'           => 'textarea',
+        'type'           => 'text',
     ));
 
 

@@ -37,7 +37,7 @@
                             'walker' => new Thesportworship_Top_Menu_Walker(), // (object) Instance of a custom walker class.
                         ));
                         ?>
-                        <span class="navbar-text text-white">Login / Register </span>
+                        <span class="navbar-text text-white under-development">Login / Register </span>
                     </div>
                 </nav>
 

@@ -6,6 +6,11 @@ document.addEventListener('DOMContentLoaded', (e)=>{
     const headingCaption = document.querySelector('.heading-caption');
     const searchMenuItem = document.getElementById('search-menu-item');
 
+    /**
+     * All elements that are under development
+     */
+    const underDevelopmentElements = document.querySelectorAll('.under-development');
+
 
     /**
      * @word Change first word text color
@@ -29,8 +34,11 @@ document.addEventListener('DOMContentLoaded', (e)=>{
     /**
      * Create bootstrap modal and display - bootstrap code is in footer.php
      */
-    if(searchMenuItem){
+    if(underDevelopmentElements.length > 0){
         searchMenuItem.addEventListener('click', displayModal);
+        underDevelopmentElements.forEach((ude, udei)=>{
+            ude.addEventListener('click', displayModal);
+        });
     }
 });
 

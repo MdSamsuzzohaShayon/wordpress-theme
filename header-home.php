@@ -37,7 +37,7 @@
                             'walker' => new Thesportworship_Top_Menu_Walker(), // (object) Instance of a custom walker class.
                         ));
                         ?>
-                        <span class="navbar-text text-white">Login / Register </span>
+                        <span class="navbar-text text-white under-development">Login / Register </span>
                     </div>
                 </nav>
 
@@ -51,6 +51,7 @@
     <!--    Start landing-->
     <div class="landing-main-menu text-white" style="background-image: url(<?php header_image(); ?>);">
 
+<!--        Main menu start -->
         <div class="main-menu container-fluid">
             <div class="container">
                 <!--        main navbar start -->
@@ -80,7 +81,7 @@
                     ?>
 
                     <div class="col-md-3 text-end">
-                        <form class="d-flex" id="search-menu-item">
+                        <form class="d-flex under-development" id="search-menu-item">
                             <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
                         </form>
                     </div>
@@ -88,3 +89,4 @@
                 <!--        main navbar end -->
             </div>
         </div>
+        <!--        Main menu end -->

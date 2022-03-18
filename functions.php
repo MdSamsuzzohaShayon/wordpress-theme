@@ -40,6 +40,7 @@ function thesportworship_enqueue_style(){
     wp_enqueue_style( 'custom-bootstrap-and-main', get_theme_file_uri("/assets/css/style.css"), array(), '1.0.0' );
     wp_enqueue_style( 'bellefier-font', get_theme_file_uri("/assets/fonts/Bellefair-Regular.ttf"), array(), '1.0.0' );
     wp_enqueue_style( 'bebas-neue-font', get_theme_file_uri("/assets/fonts/BebasNeue-Regular.ttf"), array(), '1.0.0' );
+    wp_enqueue_style( 'playfair-display-regular', get_theme_file_uri("/assets/fonts/PlayfairDisplay-Regular.ttf"), array(), '1.0.0' );
     wp_enqueue_style( 'bootstrap-icons', get_theme_file_uri("/assets/icon/bootstrap-icons/bootstrap-icons.css"), array(), '1.0.0' );
 }
 add_action("wp_enqueue_scripts", "thesportworship_enqueue_style");
@@ -54,6 +55,8 @@ function thesportworship_enqueue_script(){
 add_action("wp_enqueue_scripts", "thesportworship_enqueue_script");
 
 
+
+require_once(get_template_directory() . "/inc/custom-post-type.php");
 
 
 // MAIN MENU WITH FILTERS - main-menu-filter-register

@@ -1,6 +1,6 @@
 <?php get_header(); ?>
 <div class="container">
-    <h2 class="text-success">single.php</h2>
+    <h2 class="text-success">single-story_post.php</h2>
     <?php if(has_post_thumbnail()): ?>
 <!--        sport-large size we have declared in our functions.php-->
         <img src="<?php the_post_thumbnail_url('sport-large'); ?>" alt="" class="img-thumbnail">
