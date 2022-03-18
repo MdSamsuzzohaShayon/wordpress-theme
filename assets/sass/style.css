@@ -11155,7 +11155,14 @@ body {
 .landing-main-menu .feature-post-segment .feature-post-shape .cat-features h3, .landing-main-menu .feature-post-segment .feature-post-shape .cat-features .h3 {
   color: #C56375;
 }
-
+.landing-main-menu .feature-post-segment .feature-post-shape .features {
+  transform: skewY(7deg);
+}
+.landing-main-menu .feature-post-segment .feature-post-shape .features .large-card-image {
+  height: 450px;
+  object-fit: cover;
+  object-position: center;
+}
 .default-page-landing .main-menu {
   background-color: rgba(45, 47, 65, 0.72);
 }

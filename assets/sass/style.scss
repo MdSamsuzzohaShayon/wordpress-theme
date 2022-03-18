@@ -98,6 +98,18 @@ body{
         }
       }
 
+      .features{
+        transform: skewY($feature-skew);
+        .large-card-image{
+          height: 450px;
+          object-fit: cover;
+          object-position: center;
+        }
+      }
+      .card-item{
+
+      }
+
     }
   }
 }

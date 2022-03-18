@@ -4,6 +4,7 @@
 if ( function_exists( 'add_theme_support' ) ) {
     add_theme_support( 'post-thumbnails' );
     add_theme_support('title-tag');
+    add_theme_support('widgets');
     add_theme_support( 'post-thumbnails', array( 'carousel' ) );
     set_post_thumbnail_size( 150, 150, true ); // default Featured Image dimensions (cropped)
     add_theme_support( 'custom-logo', array(
@@ -56,14 +57,18 @@ add_action("wp_enqueue_scripts", "thesportworship_enqueue_script");
 
 
 
+require_once(get_template_directory() . "/inc/custom-sidebar.php");
+
 require_once(get_template_directory() . "/inc/custom-post-type.php");
+
+require_once(get_template_directory() . "/inc/popular-posts.php");
 
 
 // MAIN MENU WITH FILTERS - main-menu-filter-register
 require_once(get_template_directory() . "/inc/menu-registration-filter.php");
 
 
- require_once(get_template_directory() . "/inc/customize-author-information.php");
+require_once(get_template_directory() . "/inc/customize-author-information.php");
 new TheSportWorship_Author_Customizer();
 
 
