@@ -57,11 +57,13 @@ add_action("wp_enqueue_scripts", "thesportworship_enqueue_script");
 
 
 
-require_once(get_template_directory() . "/inc/custom-sidebar.php");
+//require_once(get_template_directory() . "/inc/custom-sidebar.php");
+require_once(get_template_directory() . "/inc/popular-posts.php");
+
 
 require_once(get_template_directory() . "/inc/custom-post-type.php");
 
-require_once(get_template_directory() . "/inc/popular-posts.php");
+
 
 
 // MAIN MENU WITH FILTERS - main-menu-filter-register

@@ -172,15 +172,15 @@
         </div>
 
         <!--        popular posts start -->
-        <h2 class="mt-5">ABC</h2>
-        <?php
-        echo "ABC";
-        if (have_posts()): while (have_posts()) : the_post();
-            thesportworship_save_post_views(get_the_ID());
-            the_content();
-        endwhile;
-        else: endif;
-        ?>
+<!--        <h2 class="mt-5">ABC</h2>-->
+<!--        --><?php
+//        echo "ABC";
+//        if (have_posts()): while (have_posts()) : the_post();
+//            thesportworship_save_post_views(get_the_ID());
+//            the_content();
+//        endwhile;
+//        else: endif;
+//        ?>
         <!--        popular posts end -->
     </div>
 </div>

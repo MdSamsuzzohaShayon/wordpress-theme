@@ -11107,6 +11107,10 @@ body {
   font-size: 0.7rem;
 }
 
+.main-menu-logo {
+  height: 50px;
+}
+
 .landing-main-menu {
   width: 100%;
   min-height: 100vh;

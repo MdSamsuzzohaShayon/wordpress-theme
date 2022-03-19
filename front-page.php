@@ -8,7 +8,7 @@
     <main class="main-body background-transparent">
         <?php get_template_part('template-parts/content', 'caption'); ?>
 
-        <?php get_sidebar(); ?>
+        <?php //get_sidebar(); ?>
         <?php get_template_part('template-parts/segment', 'featurepost'); ?>
 
 

@@ -28,4 +28,6 @@ class Sidebars{
 }
 
 $sidebar = new Sidebars();
+
+
 ?>

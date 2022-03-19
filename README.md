@@ -10,4 +10,5 @@
  - [The Loop](https://developer.wordpress.org/themes/basics/the-loop/), [Using the Loop](https://codex.wordpress.org/The_Loop)
  - [Pagination](https://developer.wordpress.org/themes/functionality/pagination/)
  - [Registering custom post type](https://developer.wordpress.org/plugins/post-types/registering-custom-post-types/), [custom post type template file](https://developer.wordpress.org/themes/template-files-section/custom-post-type-template-files/), [referance](https://developer.wordpress.org/reference/functions/register_post_type/)
+ - [Widgets API](https://codex.wordpress.org/Widgets_API), [Widgets](https://developer.wordpress.org/themes/functionality/widgets/)
  - [Popular post](https://www.youtube.com/watch?v=HI-VENwbUgs)
