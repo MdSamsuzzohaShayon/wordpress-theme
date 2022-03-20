@@ -12,3 +12,6 @@
  - [Registering custom post type](https://developer.wordpress.org/plugins/post-types/registering-custom-post-types/), [custom post type template file](https://developer.wordpress.org/themes/template-files-section/custom-post-type-template-files/), [referance](https://developer.wordpress.org/reference/functions/register_post_type/)
  - [Widgets API](https://codex.wordpress.org/Widgets_API), [Widgets](https://developer.wordpress.org/themes/functionality/widgets/)
  - [Popular post](https://www.youtube.com/watch?v=HI-VENwbUgs)
+ - [Updates a post meta field based on the given post ID.](https://developer.wordpress.org/reference/functions/update_post_meta/) save something custom in post database
+ - [find out what type of request WordPress is currently dealing with](https://developer.wordpress.org/reference/classes/wp_query/)
+ - 

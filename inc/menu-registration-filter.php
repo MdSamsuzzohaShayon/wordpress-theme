@@ -6,6 +6,7 @@ function thesportworship_register_menus(){
     register_nav_menus( array(
         'top_menu' => __( 'Top Menu', 'thesportworship' ),
         'main_menu'  => __( 'Main Menu', 'thesportworship' ),
+        'feature_menu'  => __( 'Feature Menu', 'thesportworship' ),
         'footer_menu'  => __( 'Footer Menu', 'thesportworship' ),
     ) );
 }

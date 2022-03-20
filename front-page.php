@@ -11,10 +11,13 @@
         <?php // get_sidebar(); ?>
 
 
-        <?php dynamic_sidebar('sidebar-popular'); ?>
+        <?php wp_nav_menu( array( 'theme_location' => 'feature_menu' ) ); ?>
 
 <!--        sidebar-popular-->
         <?php get_template_part('template-parts/segment', 'featurepost'); ?>
+
+
+        <?php dynamic_sidebar('sidebar-popular'); ?>
 
 
     <!--    POST -->
