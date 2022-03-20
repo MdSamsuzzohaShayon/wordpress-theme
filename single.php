@@ -11,7 +11,13 @@
 
     <?php get_template_part("template-parts/content", 'blogpost'); ?>
 
-    <br>
+
+    <?php
+        thesportworship_save_post_views(get_the_ID());
+        echo "Post ID " .get_the_ID();
+    ?>
+
+
     <?php
     global $wp_query;
     $big = 999999999; // need an unlikely integer

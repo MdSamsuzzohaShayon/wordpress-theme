@@ -1,6 +1,6 @@
 <?php get_header(); ?>
 <div class="container">
-    <h1>Cricket.php</h1>
+    <h1>category-cricket.php</h1>
     <h2><?php echo single_cat_title(); ?></h2>
     <?php get_template_part("template-parts/content", 'archive'); ?>
 

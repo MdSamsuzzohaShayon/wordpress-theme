@@ -1,4 +1,7 @@
 <?php
+/**
+ * @function this function will be used in single.php to get the viewer from the post
+ */
 function thesportworship_save_post_views($postID)
 {
     $metaKey = 'tsw_post_views';
@@ -6,9 +9,9 @@ function thesportworship_save_post_views($postID)
 
     $count = (empty($views) ? 0 : $views);
     $count++;
-    update_post_meta($postID, $metaKey, $count);
+    update_post_meta( $postID, $metaKey, $count);
 
-    echo $views;
+//    echo $views;
 }
 
 //Removes a callback function from an action hook.
@@ -33,55 +36,8 @@ function thesportworship_popular_post_sidebar()
 
 add_action('widgets_init', 'thesportworship_popular_post_sidebar');
 
-/**
- * @widgets Popular posts widgets
- */
-//class TSW_Popular_Posts_Widgets extends WP_Widget
-//{
-//
-//
-//
-//    public function __construct()
-//    {
-//        parent::__construct('tsw_popular_posts', 'TSW Popular Posts', array(
-//            'classname' => 'tsw-popular-posts-widgets',
-//            'description' => 'Popular Posts Widgets',
-//        ));
-//    }
-//
-//    /**
-//     * Display backend of the widget
-//     * @function Here form is a default function of WP_Widgets
-//     */
-////    public function form($instance)
-////    {
-////        $title = (!empty($instance['title']) ? $instance['title'] : 'Popular Posts');
-////        $tot = (!empty($instance['tot']) ? absint($instance['title']) : 4); // How many posts are going to display
-////
-////
-////
-////        $output = '<p>';
-////        $output .= '<label> for="' . esc_attr($this->get_field_id('title')) . '">Title </label>';
-////        $output .= '<input type="text" class="widefat" id="' . esc_attr($this->get_field_id('title')) . '" name="' . esc_attr($this->get_field_name('title')) . '" value="' . esc_attr($title) . '" />';
-////        $output .= '</p>';
-////
-////        $output .= '<p>';
-////        $output .= '<label> for="' . esc_attr($this->get_field_id('tot')) . '">Number of Posts </label>';
-////        $output .= '<input type="number" class="widefat" id="' . esc_attr($this->get_field_id('tot')) . '" name="' . esc_attr($this->get_field_name('tot')) . '" value="' . esc_attr($tot) . '" />';
-////        $output .= '</p>';
-////
-////        echo $output;
-////
-////    }
-//}
-//
-//
-//add_action('widgets_init', function () {
-//    register_widget('TSW_Popular_Posts_Widgets');
-//});
 
-
-class My_Widget extends WP_Widget
+class TSW_Popular_Posts_Widgets extends WP_Widget
 {
 
     /**
@@ -98,13 +54,40 @@ class My_Widget extends WP_Widget
 
     /**
      * Outputs the content of the widget
-     *
+     * Front-end of the widget
      * @param array $args
      * @param array $instance
      */
     public function widget($args, $instance)
     {
         // outputs the content of the widget
+        $tot = absint($instance['tot']);
+        $post_args = array(
+            'post_type' => 'post',
+            'posts_per_page' => $tot,
+            'meta_key' => 'tsw_post_views',
+            'orderby' => 'meta_value_num',
+            'order' => 'DESC'
+        );
+
+        $post_query = new WP_Query($post_args);
+        echo $args['before_widget'];
+        if(!empty($instance['title'])){
+            echo $args['before_title'] . apply_filters('widget_title', $instance['title']) . $args['after_title'];
+        }
+
+
+
+        if($post_query->have_posts()){
+            echo '<ul>';
+            while($post_query->have_posts()): $post_query->the_post();
+                echo '<li>'. get_the_title( ) .'</li>';
+            endwhile;
+            echo '</ul>';
+        }else{
+            echo "No Post";
+        }
+        echo $args['after_widget'];
     }
 
     /**
@@ -115,16 +98,16 @@ class My_Widget extends WP_Widget
     public function form($instance)
     {
         $title = (!empty($instance['title']) ? $instance['title'] : 'Popular Posts');
-        $tot = (!empty($instance['tot']) ? absint($instance['title']) : 4); // How many posts are going to display
+        $tot = (!empty($instance['tot']) ? absint($instance['tot']) : 4); // How many posts are going to display
 
 
         $output = '<p>';
-        $output .= '<label> for="' . esc_attr($this->get_field_id('title')) . '">Title </label>';
+        $output .= '<label for="' . esc_attr($this->get_field_id('title')) . '">Title </label>';
         $output .= '<input type="text" class="widefat" id="' . esc_attr($this->get_field_id('title')) . '" name="' . esc_attr($this->get_field_name('title')) . '" value="' . esc_attr($title) . '" />';
         $output .= '</p>';
 
         $output .= '<p>';
-        $output .= '<label> for="' . esc_attr($this->get_field_id('tot')) . '">Number of Posts </label>';
+        $output .= '<label for="' . esc_attr($this->get_field_id('tot')) . '">Number of Posts </label>';
         $output .= '<input type="number" class="widefat" id="' . esc_attr($this->get_field_id('tot')) . '" name="' . esc_attr($this->get_field_name('tot')) . '" value="' . esc_attr($tot) . '" />';
         $output .= '</p>';
 
@@ -143,11 +126,18 @@ class My_Widget extends WP_Widget
     public function update($new_instance, $old_instance)
     {
         // processes widget options to be saved
+         $instance = array();
+         $instance['title'] = ( !empty($new_instance['title']) ? strip_tags($new_instance['title']) : '');
+         $instance['tot'] = ( !empty($new_instance['tot']) ? absint(strip_tags($new_instance['tot'])) : 0);
+//         echo $instance;
+       return $instance;
     }
+
+
 }
 
 add_action('widgets_init', function () {
-    register_widget('My_Widget');
+    register_widget('TSW_Popular_Posts_Widgets');
 });
 
 
