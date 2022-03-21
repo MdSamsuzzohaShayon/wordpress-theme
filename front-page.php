@@ -11,8 +11,6 @@
         <?php // get_sidebar(); ?>
 
 
-        <?php wp_nav_menu( array( 'theme_location' => 'feature_menu' ) ); ?>
-
 <!--        sidebar-popular-->
         <?php get_template_part('template-parts/segment', 'featurepost'); ?>
 

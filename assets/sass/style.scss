@@ -81,6 +81,8 @@ body{
     }
   }
 
+
+
   .feature-post-segment{
     height: 1170px;
     overflow-y: hidden;
@@ -90,17 +92,22 @@ body{
       height: 1170px;
       background-image: linear-gradient( $secondary-color-1, $secondary-color-3);
       transform: skewY(-$feature-skew);
+
       .cat-features{
         padding-top: 8%;
         transform: skewY($feature-skew);
-        .cat-list-item{
-          height: 100px;
-          width: 100px;
+        .nav{
+          width: 100%;
+        }
+        .nav-link{
+          width: 350px;
+
         }
         h3{
           color: $error-color-2;
         }
       }
+
 
       .features{
         transform: skewY($feature-skew);
@@ -110,11 +117,11 @@ body{
           object-position: center;
         }
       }
-      .card-item{
 
-      }
 
     }
+
+
   }
 }
 

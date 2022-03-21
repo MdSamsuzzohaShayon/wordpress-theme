@@ -77,7 +77,7 @@ new TheSportWorship_Author_Customizer();
 
 
 
-require_once(get_template_directory() . "/inc/top-menu-walker-class.php");
+require_once(get_template_directory() . "/inc/menu-walker-class.php");
 
 
 require_once(get_template_directory() . "/inc/customize-menu-position.php");
