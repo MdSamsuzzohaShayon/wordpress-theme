@@ -88,6 +88,12 @@ body{
     overflow-y: hidden;
     padding-top: 5%;
     font-family: 'Playfair Display', serif;
+    .text-danger{
+      color: $error-color-2;
+    }
+    .rotate-cat{
+      transform: skewY($feature-skew);
+    }
     .feature-post-shape{
       height: 1170px;
       background-image: linear-gradient( $secondary-color-1, $secondary-color-3);
@@ -116,12 +122,19 @@ body{
           object-fit: cover;
           object-position: center;
         }
+        .stretched-link{
+          text-decoration: none;
+          &:after{
+            position: static;
+          }
+        }
       }
 
 
     }
-
-
+    .post-link{
+      width: 100%;
+    }
   }
 }
 

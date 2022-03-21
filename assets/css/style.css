@@ -11143,6 +11143,12 @@ body {
   padding-top: 5%;
   font-family: "Playfair Display", serif;
 }
+.landing-main-menu .feature-post-segment .text-danger {
+  color: #C56375;
+}
+.landing-main-menu .feature-post-segment .rotate-cat {
+  transform: skewY(7deg);
+}
 .landing-main-menu .feature-post-segment .feature-post-shape {
   height: 1170px;
   background-image: linear-gradient(#232537, #030015);
@@ -11168,6 +11174,15 @@ body {
   height: 450px;
   object-fit: cover;
   object-position: center;
+}
+.landing-main-menu .feature-post-segment .feature-post-shape .features .stretched-link {
+  text-decoration: none;
+}
+.landing-main-menu .feature-post-segment .feature-post-shape .features .stretched-link:after {
+  position: static;
+}
+.landing-main-menu .feature-post-segment .post-link {
+  width: 100%;
 }
 
 .default-page-landing .main-menu {

@@ -1,5 +1,11 @@
 # WordPress Theme Development for My Blog
 
+### Planning
+ - Create a WordPress blog
+ - should have a bot 
+ - Pursue forum to get post idea __https://blog.feedspot.com/sports_betting_forums/__ __https://www.indiancricketfans.com/forum/6-cricket-talk/__
+
+### Theme development reference
  - [WordPress Nav Menu](https://www.youtube.com/watch?v=TmmLRv9yY0M)
  - [Custom walker class](https://developer.wordpress.org/reference/classes/walker_nav_menu/) ([tutorial](https://www.youtube.com/watch?v=tsB6frHTUhs))
  - [Custom logo](https://developer.wordpress.org/themes/functionality/custom-logo/)
