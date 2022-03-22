@@ -11111,9 +11111,13 @@ body {
   height: 50px;
 }
 
+.landing-wrapper {
+  height: fit-content;
+}
+
 .landing-main-menu {
   width: 100%;
-  min-height: 100vh;
+  height: 100vh;
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
@@ -11191,6 +11195,13 @@ body {
 .default-page-landing .main-menu a {
   font-family: "Bellefair", serif;
   font-size: 1.2rem;
+}
+
+.latest-post {
+  font-family: "Playfair Display", serif;
+}
+.latest-post .card {
+  background: transparent;
 }
 
 /*# sourceMappingURL=style.css.map */

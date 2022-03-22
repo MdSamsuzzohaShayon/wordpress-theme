@@ -2,6 +2,7 @@
 
 ### Planning
  - Create a WordPress blog
+ - Make website 100 percent responsive
  - should have a bot 
  - Pursue forum to get post idea __https://blog.feedspot.com/sports_betting_forums/__ __https://www.indiancricketfans.com/forum/6-cricket-talk/__
 

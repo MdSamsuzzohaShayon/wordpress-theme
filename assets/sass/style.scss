@@ -50,10 +50,13 @@ body{
 .main-menu-logo{
   height: 50px;
 }
+.landing-wrapper{
+  height: fit-content;
+}
 
 .landing-main-menu{
   width: 100%;
-  min-height: 100vh;
+  height: 100vh;
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
@@ -153,3 +156,9 @@ body{
 }
 
 
+.latest-post{
+  font-family: 'Playfair Display', serif;
+  .card{
+    background: transparent;
+  }
+}

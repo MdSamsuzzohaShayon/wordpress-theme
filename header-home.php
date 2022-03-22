@@ -17,14 +17,21 @@
 
 <body class="<?php body_class(); ?>">
 
+<!--site wrapper start -->
 <div class="site-wrapper">
 
     <?php get_template_part('template-parts/segment', 'headertopmenu'); ?>
 
+
+<!--    landing container start-->
+    <div class="landing-wrapper">
+
+
+
     <!--    Start landing-->
     <div class="landing-main-menu text-white" style="background-image: url(<?php header_image(); ?>);">
 
-<!--        Main menu start -->
+        <!--        Main menu start -->
         <div class="main-menu container-fluid">
             <div class="container">
                 <!--        main navbar start -->
@@ -44,13 +51,13 @@
                     </a>
 
                     <?php
-                    wp_nav_menu( array(
+                    wp_nav_menu(array(
                         'theme_location' => 'main_menu',
                         'container' => 'ul',
-                        'menu_class'=> 'nav col-12 col-md-auto mb-2 justify-content-center mb-md-0',
-                        'add_li_class'  => '',
-                        'add_a_class'  => 'nav-link px-2 text-white text-uppercase',
-                    ) );
+                        'menu_class' => 'nav col-12 col-md-auto mb-2 justify-content-center mb-md-0',
+                        'add_li_class' => '',
+                        'add_a_class' => 'nav-link px-2 text-white text-uppercase',
+                    ));
                     ?>
 
                     <div class="col-md-3 text-end">
