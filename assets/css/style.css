@@ -11110,16 +11110,16 @@ body {
 .main-menu-logo {
   height: 50px;
 }
-
-.landing-wrapper {
-  height: fit-content;
+@media (max-width: 768px) {
+  .main-menu-logo {
+    height: 30px;
+  }
 }
 
 .landing-main-menu {
   width: 100%;
-  height: 100vh;
-  background-position: center;
-  background-size: cover;
+  background-position: top;
+  background-size: contain;
   background-repeat: no-repeat;
 }
 .landing-main-menu .main-menu {
@@ -11128,6 +11128,11 @@ body {
 .landing-main-menu .main-menu a {
   font-family: "Bellefair", serif;
   font-size: 1.2rem;
+}
+@media (max-width: 768px) {
+  .landing-main-menu .main-menu a {
+    font-size: 0.8rem;
+  }
 }
 .landing-main-menu .caption-main {
   height: 590px;

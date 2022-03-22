@@ -10,7 +10,7 @@
     <?php // get_sidebar(); ?>
 
 
-    <div class="feature-post-segment">
+    <div class="feature-post-segment" id="feature-post">
         <div class="feature-post-shape container">
             <!--                category of posts start -->
             <?php get_template_part('template-parts/segment', 'featurecat'); ?>
@@ -25,7 +25,7 @@
 
 
     <!--        latest and popular start -->
-    <div class="container">
+    <div class="container" id="latet-popular">
         <div class="row">
             <div class="col-md-8 latest-post">
                 <?php get_template_part('template-parts/segment', 'latest'); ?>
@@ -46,8 +46,7 @@
 </div>
 <!--    End landing-->
 
-</div>
-<!--    landing container end-->
+
 
 
 <?php get_footer(); ?>

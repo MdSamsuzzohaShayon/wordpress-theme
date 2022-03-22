@@ -24,7 +24,7 @@
     <!--    Start landing-->
     <div class="default-page-landing text-white">
 
-        <div class="main-menu container-fluid">
+        <div class="main-menu">
             <div class="container">
                 <!--        main navbar start -->
                 <div class="d-flex flex-wrap align-items-center justify-content-center justify-content-md-between py-3 mb-4 bg-transparent">
