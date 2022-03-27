@@ -1,0 +1,15 @@
+@mixin sm-two-columns{
+  height: fit-content;
+  a{
+    height: $sm-col-height;
+    img{
+      height: $sm-col-height;
+      width: 100%;
+      object-position: center;
+      object-fit: cover;
+    }
+    .txt-img{
+      height: $sm-col-height;
+    }
+  }
+}

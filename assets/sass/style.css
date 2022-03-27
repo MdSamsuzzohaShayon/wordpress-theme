@@ -11130,7 +11130,7 @@ body {
   font-size: 1.2rem;
 }
 @media (max-width: 768px) {
-  .landing-main-menu .main-menu a {
+  .landing-main-menu a {
     font-size: 0.8rem;
   }
 }

@@ -1,4 +1,5 @@
 @import "variables";
+@import 'mixins';
 // Include any default variable overrides here (though functions won't be available)
 
 $error: $error-color-1;
@@ -60,9 +61,9 @@ body{
 
 .landing-main-menu{
   width: 100%;
-  //height: 100vh;
-  background-position: top;
-  background-size: contain;
+  height: 100vh;
+  background-position: center;
+  background-size: cover;
   background-repeat: no-repeat;
   .main-menu{
     background-color: $secondary-color-2;
@@ -71,14 +72,14 @@ body{
       font-family: 'Bellefair', serif;
       //font-weight: 300;
       font-size: 1.2rem;
+      @media(max-width: $br-md){
+       font-size: 0.8rem;
+      }
     }
 
-    @media(max-width: $br-md){
-    a{
-      font-size: 0.8rem;
-    }
   }
-  }
+  //@media(max-width: $br-md){height: 100vh; background-size: cover;}
+
 
   .caption-main{
     height: 590px;
@@ -91,67 +92,27 @@ body{
     p{
       font-size: 1rem;
     }
-  }
-
-
-
-  .feature-post-segment{
-    height: 1170px;
-    overflow-y: hidden;
-    padding-top: 5%;
-    font-family: 'Playfair Display', serif;
-    .text-danger{
-      color: $error-color-2;
-    }
-    .rotate-cat{
-      transform: skewY($feature-skew);
-    }
-    .feature-post-shape{
-      height: 1170px;
-      background-image: linear-gradient( $secondary-color-1, $secondary-color-3);
-      transform: skewY(-$feature-skew);
-
-      .cat-features{
-        padding-top: 8%;
-        transform: skewY($feature-skew);
-        .nav{
-          width: 100%;
-        }
-        .nav-link{
-          width: 350px;
-
-        }
-        h3{
-          color: $error-color-2;
-        }
-      }
-
-
-      .features{
-        transform: skewY($feature-skew);
-        .large-card-image{
-          height: 450px;
-          object-fit: cover;
-          object-position: center;
-        }
-        .stretched-link{
-          text-decoration: none;
-          &:after{
-            position: static;
-          }
-        }
-      }
-
-
-    }
-    .post-link{
-      width: 100%;
+    @media(max-width: $br-md){
+      height: 400px;
+      h2{font-size: 2rem;}
     }
   }
+
+
+
+
 }
 
 
 
+
+
+@media(max-width: $br-md){
+  .sec-heading{
+    border-bottom: 1px solid $error-color-2;
+    text-align: left !important;
+  }
+}
 
 
 .default-page-landing{
@@ -165,9 +126,134 @@ body{
 }
 
 
-.latest-post{
+
+
+
+.feature-post-segment{
+  height: $f-post-h;
+  overflow-y: hidden;
+  padding-top: 5%;
+  //padding-bottom: 2%;
   font-family: 'Playfair Display', serif;
-  .card{
-    background: transparent;
+  //transform: translateY(-$translate-top);
+  h2{color: $error-color-2 !important;}
+  .text-danger{
+    color: $error-color-2;
+  }
+  .rotate-cat{
+    transform: skewY($feature-skew);
+  }
+  .feature-post-shape{
+    height: $f-post-h;
+    background-image: linear-gradient( $secondary-color-1, $secondary-color-3);
+    //background-color: blue;
+    transform: skewY(-$feature-skew);
+
+    .feature-lg-img{
+      height: 620px;
+      .row{
+        padding: 0;
+        margin: 0;
+      }
+      img{
+        height: 100%;
+        width: 100%;
+        object-fit: cover;
+        object-position: center;
+      }
+      h5{
+        margin-top: 10px;
+        margin-left: 0 !important;
+        margin-right: 0 !important;
+      }
+    }
+
+    .smColumn1,{
+      @include sm-two-columns;
+    }
+    .smColumn2{
+      @include sm-two-columns;
+    }
+
+    .cat-features{
+      padding-top: 8%;
+      transform: skewY($feature-skew);
+      .nav{
+        width: 100%;
+      }
+      .nav-link{
+        width: 350px;
+
+      }
+      h3{
+        color: $error-color-2;
+      }
+    }
+
+
+    .features{
+      transform: skewY($feature-skew);
+      .large-card-image{
+        height: 450px;
+        object-fit: cover;
+        object-position: center;
+      }
+      .stretched-link{
+        text-decoration: none;
+        &:after{
+          position: static;
+        }
+      }
+    }
+
+
+  }
+  .post-link{
+    width: 100%;
+  }
+  @media(max-width: $br-md){
+    height: fit-content;
+    transform: translateY(0px);
+    padding-top: 0;
+    .rotate-cat{
+      transform: skewY(0deg);
+    }
+    .feature-post-shape{
+      height: fit-content;
+      transform: translateY(0px);
+      .cat-features{
+        transform: translateY(0px);
+        padding-top: 0;
+      }
+      .features{
+        transform: translateY(0px);
+      }
+    }
   }
 }
+
+.latest-popular{
+  z-index: 1;
+  h2{
+    color: $error-color-2 !important;
+  }
+  h5{
+    color: $error-color-2 !important;
+  }
+  //transform: translateY(-$translate-top);
+  .latest-post{
+    font-family: 'Playfair Display', serif;
+    .card{
+      background: transparent;
+      .card-title{
+        color: $error-color-2 !important;
+      }
+    }
+  }
+  @media(max-width: $br-md){
+    //transform: translateY(0);
+  }
+}
+
+
+
