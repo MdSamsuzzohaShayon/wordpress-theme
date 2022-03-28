@@ -28,9 +28,8 @@
             ?>
 
             <div class="col-md-3 text-end">
-                <form class="d-flex under-development" id="search-menu-item">
-                    <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-                </form>
+<!--                handled by searchform.php-->
+                <?php get_search_form(); ?>
             </div>
         </div>
         <!--        main navbar end -->

@@ -7,4 +7,6 @@
 <!--    --><?php //the_content(); ?>
     <p><?php the_excerpt(); ?></p>
     <a href="<?php the_permalink(); ?>" class="btn text-danger bg-secondary">Read more</a>
-<?php endwhile; else: endif; ?>
+<?php endwhile; else: ?>
+    <h2>No posts found!!</h2>
+<?php endif; ?>

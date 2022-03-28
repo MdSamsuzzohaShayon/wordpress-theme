@@ -6,9 +6,9 @@ document.addEventListener('DOMContentLoaded', (e) => {
     const headingCaption = document.querySelector('.heading-caption');
     const searchMenuItem = document.getElementById('search-menu-item');
     const features = document.getElementById('features');
-    const featureItems = features.querySelectorAll('.f-item');
+    const featureItems = features ? features.querySelectorAll('.f-item') : null;
     const latestPopular = document.getElementById('latest-popular');
-    const listHeading = latestPopular.querySelectorAll('.list-heading');
+    const listHeading = latestPopular ?  latestPopular.querySelectorAll('.list-heading') : null;
 
     /**
      * All elements that are under development
@@ -38,14 +38,17 @@ document.addEventListener('DOMContentLoaded', (e) => {
     /**
      * Make sure that header is not more than 32 character long
      */
-    if(featureItems.length > 0){
-        featureItemHeadingSubStr(featureItems, true);
+    if(featureItems){
+        if(featureItems.length > 0){
+            featureItemHeadingSubStr(featureItems, true);
 
-        if(featureItems[0]){
-            featureItems[0].querySelector('.desc').nextElementSibling.classList.remove('mx-2');
-            featureItems[0].querySelector('.desc').previousElementSibling.classList.add('mb-4');
+            if(featureItems[0]){
+                featureItems[0].querySelector('.desc').nextElementSibling.classList.remove('mx-2');
+                featureItems[0].querySelector('.desc').previousElementSibling.classList.add('mb-4');
+            }
         }
     }
+
 
 
     /**
@@ -135,15 +138,16 @@ document.addEventListener('DOMContentLoaded', (e) => {
         }
 
 
-        if(listHeading.length > 0){
-            const MAX_CHAR = 95;
-            listHeading.forEach((lh, i)=>{
-                if(lh.textContent.toString().length > MAX_CHAR){
-                    lh.textContent = lh.textContent.toString().substring(0,MAX_CHAR) + '...';
-                }
-            });
+        if(listHeading){
+            if(listHeading.length > 0){
+                const MAX_CHAR = 95;
+                listHeading.forEach((lh, i)=>{
+                    if(lh.textContent.toString().length > MAX_CHAR){
+                        lh.textContent = lh.textContent.toString().substring(0,MAX_CHAR) + '...';
+                    }
+                });
+            }
         }
-
     }
     responsiveDesign();
 
@@ -153,7 +157,7 @@ document.addEventListener('DOMContentLoaded', (e) => {
      * Create bootstrap modal and display - bootstrap code is in footer.php
      */
     if (underDevelopmentElements.length > 0) {
-        searchMenuItem.addEventListener('click', displayModal);
+        // searchMenuItem.addEventListener('click', displayModal);
         underDevelopmentElements.forEach((ude, udei) => {
             ude.addEventListener('click', displayModal);
         });
