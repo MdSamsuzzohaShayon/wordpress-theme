@@ -7,6 +7,8 @@ document.addEventListener('DOMContentLoaded', (e) => {
     const searchMenuItem = document.getElementById('search-menu-item');
     const features = document.getElementById('features');
     const featureItems = features.querySelectorAll('.f-item');
+    const latestPopular = document.getElementById('latest-popular');
+    const listHeading = latestPopular.querySelectorAll('.list-heading');
 
     /**
      * All elements that are under development
@@ -127,11 +129,20 @@ document.addEventListener('DOMContentLoaded', (e) => {
                 const fic = features.querySelectorAll('.col-sm-12');
                 fic.forEach((fici, i)=>{
                     fici.classList.add('mb-4');
-                    console.log(fic)
+                    // console.log(fic);
                 });
             }
         }
 
+
+        if(listHeading.length > 0){
+            const MAX_CHAR = 95;
+            listHeading.forEach((lh, i)=>{
+                if(lh.textContent.toString().length > MAX_CHAR){
+                    lh.textContent = lh.textContent.toString().substring(0,MAX_CHAR) + '...';
+                }
+            });
+        }
 
     }
     responsiveDesign();

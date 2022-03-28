@@ -18,6 +18,21 @@ function thesportworship_save_post_views($postID)
 remove_action('wp_head', 'adjacent_posts_rel_link_wp_head', 10, 0);
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 /**
  * @sidebar Popular posts sidebar
  */
@@ -27,16 +42,34 @@ function thesportworship_popular_post_sidebar()
         'name' => __('Popular sidebar', 'thesportworship'),
         'id' => 'sidebar-popular',
         'description' => __('Widgets in this area will be shown on all popular posts.', 'thesportworship'),
-        'before_widget' => '<li id="%1$s" class="widget %2$s">',
-        'after_widget' => '</li>',
-        'before_title' => '<h2 class="widgettitle">',
-        'after_title' => '</h2>',
+//        'before_widget' => '"<li id="%1$s" class="widget %2$s">"',
+        'before_widget' => '',
+        'after_widget' => '',
+//        'before_title' => '<h2 class="text-danger text-capitalize mb-5 sec-heading widgettitle">',
+//        'after_title' => '</h2>',
     ));
 }
 
 add_action('widgets_init', 'thesportworship_popular_post_sidebar');
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/**
+ * @widget for registering a widget and add different property in widgets
+ */
 class TSW_Popular_Posts_Widgets extends WP_Widget
 {
 
@@ -73,17 +106,30 @@ class TSW_Popular_Posts_Widgets extends WP_Widget
         $post_query = new WP_Query($post_args);
         echo $args['before_widget'];
         if(!empty($instance['title'])){
-            echo $args['before_title'] . apply_filters('widget_title', $instance['title']) . $args['after_title'];
+//            echo $args['before_title'] ;
+//            echo $args['before_title'] . apply_filters('widget_title', $instance['title']) . $args['after_title'];
+            echo "<h2 class='text-danger text-capitalize mb-5 sec-heading'>" . apply_filters('widget_title', $instance['title']) . "</h2>";
         }
 
 
 
+
+
+
         if($post_query->have_posts()){
-            echo '<ul>';
+            echo '<ol class="list-group list-group-numbered">';
             while($post_query->have_posts()): $post_query->the_post();
-                echo '<li>'. get_the_title( ) .'</li>';
+//                echo '<li>'. get_the_title( ) .'</li>';
+                echo '<li class="list-group-item d-flex justify-content-start align-items-start bg-transparent">
+                        <a href="'. get_permalink() .'" class="text-decoration-none">
+                            <div class="ms-2 me-auto">
+                                <div class="fw-bold text-white list-heading">'. get_the_title() .'</div>
+                                <small class="text-muted">Posted: March 21, 2022 at 1:50 pm</small>
+                            </div>
+                        </a>
+                    </li>';
             endwhile;
-            echo '</ul>';
+            echo '</ol>';
         }else{
             echo "No Post";
         }

@@ -4,15 +4,30 @@
 
 $error: $error-color-1;
 $secondary: $secondary-color-1;
+$light: $light-color-1;
+$dark: $dark-color-1;
+
+$input-border-radius: 0;
+$input-border-width: 0;
+
+
+
+
+
 $container-max-widths: (
         xxl: 1480px
 );
+
+$border-color: rgba(114, 114, 128, 0.3);
 
 
 
 
 
 @import "../bootstrap/scss/bootstrap.scss";
+
+
+
 
 $utilities: map-merge(
                 $utilities,
@@ -26,6 +41,29 @@ $utilities: map-merge(
                         ),
                 )
 );
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 // Then add additional custom code here
@@ -132,7 +170,10 @@ body{
 .feature-post-segment{
   height: $f-post-h;
   overflow-y: hidden;
-  padding-top: 5%;
+  @media(min-width: $br-md){
+    margin-top: -300px;
+    padding-top: 7%;
+  }
   //padding-bottom: 2%;
   font-family: 'Playfair Display', serif;
   //transform: translateY(-$translate-top);
@@ -238,7 +279,7 @@ body{
     color: $error-color-2 !important;
   }
   h5{
-    color: $error-color-2 !important;
+    //color: $error-color-2 !important;
   }
   //transform: translateY(-$translate-top);
   .latest-post{
@@ -250,8 +291,38 @@ body{
       }
     }
   }
-  @media(max-width: $br-md){
-    //transform: translateY(0);
+
+  .popular-post{
+    .list-heading{
+      color: $error-color-2;
+    }
+    ol {
+      counter-reset: items;
+    }
+    li {
+      display: block;
+      counter-increment: items;
+      &:before {
+        content: "0" counter(items)" ";
+        color: #6c757d !important;
+        font-size: 2rem;
+      }
+      &:nth-child(n+8):before {
+        content: "0" counter(items)" ";
+      }
+    }
+  }
+
+}
+
+.blog-footer{
+  width: 100%;
+  //background-color: #202234;
+  background-color: $secondary-color-2;
+  font-family: 'Bellefair', serif;
+
+  .newsletter-input{
+    background-color: #33364D !important;
   }
 }
 

@@ -3,7 +3,7 @@
 ### Planning
  - Create a WordPress blog
  - Make website 100 percent responsive
- - should have a bot 
+ - should have a bot for messaging
  - Pursue forum to get post idea __https://blog.feedspot.com/sports_betting_forums/__ __https://www.indiancricketfans.com/forum/6-cricket-talk/__
 
 ### Theme development reference
@@ -21,4 +21,8 @@
  - [Popular post](https://www.youtube.com/watch?v=HI-VENwbUgs)
  - [Updates a post meta field based on the given post ID.](https://developer.wordpress.org/reference/functions/update_post_meta/) save something custom in post database
  - [find out what type of request WordPress is currently dealing with](https://developer.wordpress.org/reference/classes/wp_query/)
- - 
+ - Display popular posts
+ - active search 
+ - Footer
+ - Single posts
+ - Add newsletter
