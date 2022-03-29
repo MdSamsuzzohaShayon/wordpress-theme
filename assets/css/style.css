@@ -11336,6 +11336,17 @@ body {
   content: "0" counter(items) " ";
 }
 
+.pagination .page-item a {
+  text-decoration: none;
+  color: rgba(193, 186, 234, 0.38);
+}
+.pagination .active a {
+  background-color: rgba(193, 186, 234, 0.38) !important;
+}
+.pagination .disabled a {
+  background-color: rgba(45, 47, 65, 0.72) !important;
+}
+
 .blog-footer {
   width: 100%;
   background-color: rgba(45, 47, 65, 0.72);

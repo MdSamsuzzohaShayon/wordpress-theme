@@ -84,6 +84,8 @@ require_once(get_template_directory() . "/inc/customize-menu-position.php");
 
 require_once(get_template_directory() . "/inc/customize-header-caption.php");
 
+require_once(get_template_directory() . "/inc/customize-pagination.php");
+
 
 
 

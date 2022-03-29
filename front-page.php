@@ -28,11 +28,11 @@
 
 <!--        latest and popular start -->
 <div class="container latest-popular mt-5" id="latest-popular">
-    <div class="row">
+    <div class="row align-items-md-start">
         <div class="col-md-8 latest-post">
             <?php get_template_part('template-parts/segment', 'latest'); ?>
         </div>
-        <div class="col-md-4 popular-post">
+        <div class="col-md-4 popular-post sticky-md-top">
             <?php dynamic_sidebar('sidebar-popular'); ?>
         </div>
     </div>

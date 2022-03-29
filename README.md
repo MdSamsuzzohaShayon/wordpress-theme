@@ -22,7 +22,7 @@
  - [Updates a post meta field based on the given post ID.](https://developer.wordpress.org/reference/functions/update_post_meta/) save something custom in post database
  - [find out what type of request WordPress is currently dealing with](https://developer.wordpress.org/reference/classes/wp_query/)
  - [Display search form.](https://developer.wordpress.org/reference/functions/get_search_form/), [Create search page](https://codex.wordpress.org/Creating_a_Search_Page)
- - 
+ - [Filters text content and strips out disallowed HTML.](https://developer.wordpress.org/reference/functions/wp_kses/), 
  - Display popular posts
  - active search 
  - Footer
