@@ -28,6 +28,7 @@
  - Footer
  - Single posts
  - Add newsletter
+ - Contact, About page
 
 ### Change for production
  - Search form action need to change

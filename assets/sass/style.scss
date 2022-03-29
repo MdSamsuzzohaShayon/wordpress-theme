@@ -73,6 +73,12 @@ body{
   background-color: $secondary-color-3;
 }
 
+.site-wrapper{
+  font-family: $playfair;
+  .text-justify{
+    text-align: justify;
+  }
+}
 
 
 .top-menu, .top-navbar{
@@ -80,7 +86,7 @@ body{
   .nav-link, .navbar-text{
     color: white;
     font-size: 0.8rem;
-    font-family: 'Bellefair', serif;
+    font-family: $bellefair;
     //font-family: 'Bebas Neue', cursive;
   }
   .top-menu-icon{
@@ -130,9 +136,9 @@ body{
 
   .caption-main{
     height: 590px;
-    font-family: 'Playfair Display', serif;
+    font-family: $playfair;
     h2{
-      font-family: 'Bebas Neue', cursive;
+      font-family: $caption;
       font-size: 2.5rem;
       font-weight: 700;
     }
@@ -166,7 +172,7 @@ body{
   .main-menu{
     background-color: $secondary-color-2;
     a{
-      font-family: 'Bellefair', serif;
+      font-family: $bellefair;
       font-size: 1.2rem;
     }
   }
@@ -184,7 +190,7 @@ body{
     padding-top: 7%;
   }
   //padding-bottom: 2%;
-  font-family: 'Playfair Display', serif;
+  font-family: $playfair;
   //transform: translateY(-$translate-top);
   h2{color: $error-color-2 !important;}
   .text-danger{
@@ -292,7 +298,10 @@ body{
   }
   //transform: translateY(-$translate-top);
   .latest-post{
-    font-family: 'Playfair Display', serif;
+    font-family: $playfair;
+    img{
+      @include fit-post-image();
+    }
     .card{
       background: transparent;
       .card-title{
@@ -324,6 +333,22 @@ body{
 
 }
 
+
+.cricket-post{
+  .post{
+    height: fit-content;
+    h3{
+      font-family: $playfair !important;
+    }
+  }
+  img{
+    @include fit-post-image();
+  }
+  .text-error{
+    color: $error-color-2 !important;
+  }
+}
+
 .pagination{
   .page-item{
     a{
@@ -351,7 +376,7 @@ body{
   width: 100%;
   //background-color: #202234;
   background-color: $secondary-color-2;
-  font-family: 'Bellefair', serif;
+  font-family: $bellefair;
 
   .newsletter-input{
     background-color: #33364D !important;

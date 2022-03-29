@@ -10,15 +10,18 @@
     if ( $the_query->have_posts() ) {
         while ( $the_query->have_posts() ) {
             $the_query->the_post();
-
+            $img_url = get_template_directory_uri() . '/assets/img/no-image.jpg';
+            if(get_the_post_thumbnail_url(get_the_ID(),'sport-large')){
+                $img_url = get_the_post_thumbnail_url(get_the_ID(),'sport-large');
+            }
             ?>
             <div class="col-md-6 mb-3">
                 <a class="text-decoration-none text-white" href="<?php echo the_permalink(); ?>">
-                    <img src="<?php echo the_post_thumbnail_url('sport-large'); ?>" class="card-img-top" alt="...">
+                    <img src="<?php echo $img_url ; ?>" class="card-img-top" alt="...">
                     <div class="card-body px-0">
                         <h5 class="card-title"><?php the_title(); ?></h5>
-                        <p class="card-text text-white"><?php the_excerpt(); ?></p>
-                        <p class="my-0"><small class="text-muted">Posted: <?php echo get_the_date('F j, Y') ; ?>  at <?php the_time('g:i a'); ?></small></p>
+                        <p class="card-text text-white latest-desc"><?php the_excerpt(); ?></p>
+                        <small class="text-muted">Posted: <?php echo get_the_date('F j, Y') ; ?>  at <?php the_time('g:i a'); ?></small>
                     </div>
                 </a>
             </div>

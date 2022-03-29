@@ -9,6 +9,9 @@ document.addEventListener('DOMContentLoaded', (e) => {
     const featureItems = features ? features.querySelectorAll('.f-item') : null;
     const latestPopular = document.getElementById('latest-popular');
     const listHeading = latestPopular ?  latestPopular.querySelectorAll('.list-heading') : null;
+    const cricketPost = document.querySelector('.cricket-post');
+
+
 
     /**
      * All elements that are under development
@@ -40,7 +43,7 @@ document.addEventListener('DOMContentLoaded', (e) => {
      */
     if(featureItems){
         if(featureItems.length > 0){
-            featureItemHeadingSubStr(featureItems, true);
+            featureItemHeadingSubStr(featureItems, true, 62);
 
             if(featureItems[0]){
                 featureItems[0].querySelector('.desc').nextElementSibling.classList.remove('mx-2');
@@ -56,6 +59,10 @@ document.addEventListener('DOMContentLoaded', (e) => {
      */
     const responsiveDesign=()=>{
 
+        /**
+         * @layout
+         * Change layout of feature for different screen
+         */
         if(features){
 
             if(window.innerWidth > 768){
@@ -110,6 +117,12 @@ document.addEventListener('DOMContentLoaded', (e) => {
                 }
 
 
+                if(latestPopular){
+                    const latestPost = latestPopular.querySelector('.latest-post');
+                    substractCharecterContent(latestPost, 'p', 200);
+                }
+
+                substractCharecterContent(cricketPost, 'p', 200);
 
                 features.replaceWith(newFeatures);
             }else{
@@ -118,7 +131,15 @@ document.addEventListener('DOMContentLoaded', (e) => {
                  * This is for small screen
                  */
 
-                featureItemHeadingSubStr(featureItems, false);
+                featureItemHeadingSubStr(featureItems, false, 62);
+
+                if(latestPopular){
+                    const latestPost = latestPopular.querySelector('.latest-post');
+                    substractCharecterContent(latestPost, 'p', 150);
+                }
+                substractCharecterContent(cricketPost, 'p', 200);
+
+
 
                 features.querySelector('.desc').remove();
                 const heading = features.querySelectorAll('h5');
@@ -128,6 +149,8 @@ document.addEventListener('DOMContentLoaded', (e) => {
                 });
 
 
+
+
                 // border-bottom border-danger mb-
                 const fic = features.querySelectorAll('.col-sm-12');
                 fic.forEach((fici, i)=>{
@@ -135,6 +158,9 @@ document.addEventListener('DOMContentLoaded', (e) => {
                     // console.log(fic);
                 });
             }
+
+
+
         }
 
 
@@ -147,6 +173,18 @@ document.addEventListener('DOMContentLoaded', (e) => {
                     }
                 });
             }
+        }
+
+
+
+        // Cricket posts
+        if(cricketPost){
+            const cPostHeading =cricketPost.getElementsByTagName('h5');
+            const cPostContent =cricketPost.getElementsByTagName('p');
+            Array.from(cPostHeading).forEach((cp, i)=>{
+                cp.textContent = cp.textContent.toString().substring(0, 50);
+            });
+            Array.from(cPostContent).forEach((cpc, i)=> cpc.textContent = cpc.textContent.toString().substring(0, 200));
         }
     }
     responsiveDesign();
@@ -179,8 +217,7 @@ const displayModal = (e) => {
 
 
 
-const featureItemHeadingSubStr=(featureItems, firstItemBlock)=>{
-    const MAX_CHAR = 62;
+const featureItemHeadingSubStr=(featureItems, firstItemBlock, MAX_CHAR)=>{
     featureItems.forEach((fi, i)=>{
         const heading = fi.querySelector('h5');
         if(firstItemBlock === true){
@@ -195,6 +232,17 @@ const featureItemHeadingSubStr=(featureItems, firstItemBlock)=>{
             }
         }
     });
+}
+
+
+
+const substractCharecterContent =(container, selector, MAX_CHAR)=>{
+    if(container){
+        const elements = container.querySelectorAll(selector);
+        elements.forEach((elem, i)=>{
+            elem.textContent = elem.textContent.toString().length > MAX_CHAR ? elem.textContent.toString().substring(0, MAX_CHAR) + '...' : elem.textContent;
+        });
+    }
 }
 
 

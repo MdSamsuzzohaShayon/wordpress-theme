@@ -11094,6 +11094,13 @@ body {
   background-color: #030015;
 }
 
+.site-wrapper {
+  font-family: "Playfair Display", serif;
+}
+.site-wrapper .text-justify {
+  text-align: justify;
+}
+
 .top-menu, .top-navbar {
   height: 35px;
 }
@@ -11311,6 +11318,12 @@ body {
 .latest-popular .latest-post {
   font-family: "Playfair Display", serif;
 }
+.latest-popular .latest-post img {
+  width: 100%;
+  height: 250px;
+  object-fit: cover;
+  object-position: center;
+}
 .latest-popular .latest-post .card {
   background: transparent;
 }
@@ -11334,6 +11347,22 @@ body {
 }
 .latest-popular .popular-post li:nth-child(n+8):before {
   content: "0" counter(items) " ";
+}
+
+.cricket-post .post {
+  height: fit-content;
+}
+.cricket-post .post h3, .cricket-post .post .h3 {
+  font-family: "Playfair Display", serif !important;
+}
+.cricket-post img {
+  width: 100%;
+  height: 250px;
+  object-fit: cover;
+  object-position: center;
+}
+.cricket-post .text-error {
+  color: #C56375 !important;
 }
 
 .pagination .page-item a {
