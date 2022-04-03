@@ -22,7 +22,10 @@
  - [Updates a post meta field based on the given post ID.](https://developer.wordpress.org/reference/functions/update_post_meta/) save something custom in post database
  - [find out what type of request WordPress is currently dealing with](https://developer.wordpress.org/reference/classes/wp_query/)
  - [Display search form.](https://developer.wordpress.org/reference/functions/get_search_form/), [Create search page](https://codex.wordpress.org/Creating_a_Search_Page)
- - [Filters text content and strips out disallowed HTML.](https://developer.wordpress.org/reference/functions/wp_kses/), 
+ - [Filters text content and strips out disallowed HTML.](https://developer.wordpress.org/reference/functions/wp_kses/),
+ - [Retrieves the URL to the admin area for the current site.](https://developer.wordpress.org/reference/functions/admin_url/), [Tutorial](https://www.youtube.com/watch?v=LYvx_L9ESn0), 
+ - [Fires authenticated Ajax actions for logged-in users.](https://developer.wordpress.org/reference/hooks/wp_ajax_action/), [Fires non-authenticated Ajax actions for logged-out users.](https://developer.wordpress.org/reference/hooks/wp_ajax_nopriv_action/)
+ - 
  - Display popular posts
  - active search 
  - Footer

@@ -10,6 +10,7 @@ document.addEventListener('DOMContentLoaded', (e) => {
     const latestPopular = document.getElementById('latest-popular');
     const listHeading = latestPopular ?  latestPopular.querySelectorAll('.list-heading') : null;
     const cricketPost = document.querySelector('.cricket-post');
+    const contactForm = document.getElementById('contact-form');
 
 
 
@@ -188,6 +189,53 @@ document.addEventListener('DOMContentLoaded', (e) => {
         }
     }
     responsiveDesign();
+
+
+
+
+    /**
+     * @form
+     * Contact form submission
+     */
+    // console.log(contactForm);
+    if(contactForm){
+        contactForm.addEventListener('submit', (e)=>{
+            e.preventDefault();
+            const {endpoint} = e.target.dataset;
+
+            const inputs = e.target.getElementsByTagName('input');
+            const textarea = e.target.getElementsByTagName('textarea');
+
+            const params = {};
+            /**
+             * Making query string from input value
+             */
+            [...Array.from(inputs), ...Array.from(textarea)].forEach((input, i)=>{
+                // console.log({name: input.name, value: input.value});
+                params[input.name] = [input.value];
+            });
+            const queryString = new URLSearchParams(params);
+            // console.log(queryString.toString()); // name=Shayon&email=mdshayon0%40gmail.com&message=SOmething
+
+
+            /**
+             * Setting form data and send request though axios
+             */
+            const formData = new FormData();
+            formData.append('action', 'contact');
+            formData.append('contact', queryString.toString());
+
+            axios.post(endpoint, formData)
+                .then(function (response) {
+                    console.log(response.data.data);
+                })
+                .catch(function (error) {
+                    console.log(error);
+                });
+        // .map(function(k) {return esc(k) + '=' + esc(params[k]);})
+
+        });
+    }
 
 
 

@@ -50,6 +50,7 @@ add_action("wp_enqueue_scripts", "thesportworship_enqueue_style");
 
 function thesportworship_enqueue_script(){
 //    wp_enqueue_script( 'bootstrap-js', get_theme_file_uri("/assets/js/bootstrap.bundle.min.js"), array(), '5.0.0' );
+    wp_enqueue_script( 'axios-js', 'https://unpkg.com/axios/dist/axios.min.js', array(), '5.0.0' );
     wp_enqueue_script( 'bootstrap-js', get_theme_file_uri('/assets/js/bootstrap.min.js'), array(), '5.0.0' );
     wp_enqueue_script( 'main-js', get_theme_file_uri("/assets/js/main.js"), array(), '1.0.0' );
 }
@@ -85,6 +86,9 @@ require_once(get_template_directory() . "/inc/customize-menu-position.php");
 require_once(get_template_directory() . "/inc/customize-header-caption.php");
 
 require_once(get_template_directory() . "/inc/customize-pagination.php");
+
+
+require_once(get_template_directory() . "/inc/form-submission.php");
 
 
 
