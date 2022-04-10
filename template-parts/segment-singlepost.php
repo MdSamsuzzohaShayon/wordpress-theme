@@ -12,7 +12,7 @@
     $tags = get_tags();
     foreach ($tags as $tag): ?>
         <?php $tag_link = get_tag_link( $tag->term_id ); ?>
-        <a href="<?php $tag_link; ?>" class="badge bg-danger"><?php echo $tag->name; ?></a>
+        <a href="<?php $tag_link; ?>" class="badge bg-secondary"><?php echo $tag->name; ?></a>
     <?php endforeach; ?>
     <br>
 <p>Category</p>
@@ -20,7 +20,7 @@
     $categories = get_the_category();
     foreach ($categories as $cat): ?>
         <?php $cat_link = get_category_link( $cat->term_id ); ?>
-        <a href="<?php $cat_link; ?>" class="badge bg-danger"><?php echo $cat->name; ?></a>
+        <a href="<?php $cat_link; ?>" class="badge bg-secondary"><?php echo $cat->name; ?></a>
     <?php endforeach; ?>
 
 <!--Comments section -->

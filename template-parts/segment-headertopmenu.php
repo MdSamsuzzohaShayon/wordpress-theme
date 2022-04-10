@@ -12,7 +12,7 @@
                 ));
                 ?>
                 <div class="d-flex">
-                    <span class="navbar-text text-white under-development">Login / Register </span>
+                    <span class="navbar-text text-danger under-development">Login / Register </span>
                 </div>
             </nav>
         </div>

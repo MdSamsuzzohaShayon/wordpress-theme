@@ -24,14 +24,12 @@
  - [Display search form.](https://developer.wordpress.org/reference/functions/get_search_form/), [Create search page](https://codex.wordpress.org/Creating_a_Search_Page)
  - [Filters text content and strips out disallowed HTML.](https://developer.wordpress.org/reference/functions/wp_kses/),
  - [Retrieves the URL to the admin area for the current site.](https://developer.wordpress.org/reference/functions/admin_url/), [Tutorial](https://www.youtube.com/watch?v=LYvx_L9ESn0), 
- - [Fires authenticated Ajax actions for logged-in users.](https://developer.wordpress.org/reference/hooks/wp_ajax_action/), [Fires non-authenticated Ajax actions for logged-out users.](https://developer.wordpress.org/reference/hooks/wp_ajax_nopriv_action/)
- - 
- - Display popular posts
- - active search 
- - Footer
- - Single posts
+ - [Fires authenticated Ajax actions for logged-in users.](https://developer.wordpress.org/reference/hooks/wp_ajax_action/), [Fires non-authenticated Ajax actions for logged-out users.](https://developer.wordpress.org/reference/hooks/wp_ajax_nopriv_action/), [Email in WordPress using the Gmail SMTP Server](https://www.youtube.com/watch?v=bT6o5dKAQcE), [ SMTP Override for Email Sending](https://www.youtube.com/watch?v=jRQ3Tvk1Zd8&t=312s), ["Nonces" - Security for your AJAX Form](https://www.youtube.com/watch?v=Cw8xpWlGh1s&list=PLgFB6lmeXFOpHnNmQ4fdIYA5X_9XhjJ9d&index=13)
+ 
+ - Single post 
+ - Comments section
  - Add newsletter
- - Contact, About page
+ - About Page
 
 ### Change for production
  - Search form action need to change

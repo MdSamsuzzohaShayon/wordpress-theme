@@ -11103,15 +11103,10 @@ body {
 
 .top-menu, .top-navbar {
   height: 35px;
+  color: #C56375 !important;
 }
-.top-menu .nav-link, .top-menu .navbar-text, .top-navbar .nav-link, .top-navbar .navbar-text {
-  color: white;
-  font-size: 0.8rem;
-  font-family: "Bellefair", serif;
-}
-.top-menu .top-menu-icon, .top-navbar .top-menu-icon {
-  color: #A64254;
-  font-size: 0.7rem;
+.top-menu .text-danger, .top-navbar .text-danger {
+  color: #C56375 !important;
 }
 
 .main-menu-logo {
@@ -11141,8 +11136,8 @@ body {
   background-color: rgba(45, 47, 65, 0.72);
 }
 .landing-main-menu .main-menu a {
-  font-family: "Bellefair", serif;
-  font-size: 1.2rem;
+  font-family: "Bebas Neue", cursive !important;
+  font-size: 1rem;
 }
 @media (max-width: 768px) {
   .landing-main-menu .main-menu a {

@@ -197,7 +197,7 @@ class Thesportworship_Top_Menu_Walker extends Walker {
         foreach ( $atts as $attr => $value ) {
             if ( is_scalar( $value ) && '' !== $value && false !== $value ) {
                 $value       = ( 'href' === $attr ) ? esc_url( $value ) : esc_attr( $value );
-                $attributes .= ' class="nav-link"';
+                $attributes .= ' class="nav-link text-danger"';
                 $attributes .= ' ' . $attr . '="' . $value . '"';
             }
         }

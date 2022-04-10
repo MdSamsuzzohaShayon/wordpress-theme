@@ -3,7 +3,7 @@
     <div class="container">
         <!--        main navbar start -->
         <div class="d-flex flex-wrap align-items-center justify-content-start justify-content-md-between py-3 bg-transparent">
-            <a href="/" class="d-flex align-items-center col-md-3 mb-2 mb-md-0 text-dark text-decoration-none">
+            <a href="<?php echo get_home_url(); ?>" class="d-flex align-items-center col-md-3 mb-2 mb-md-0 text-dark text-decoration-none">
                 <?php
 
                 $custom_logo_id = get_theme_mod('custom_logo');

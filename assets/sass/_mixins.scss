@@ -21,3 +21,12 @@
   object-fit: cover;
   object-position: center;
 }
+
+
+@mixin bg_image_style( $w, $h,){
+  width: $w;
+  height: $h;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
