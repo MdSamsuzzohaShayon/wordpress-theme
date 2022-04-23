@@ -1,4 +1,3 @@
-
 <!--modal start-->
 <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
     <div class="modal-dialog">
@@ -25,7 +24,19 @@
             <div class="row py-5 my-5 text-sm-center">
                 <div class="col-md-3 col-sm-12 text-center text-md-start">
                     <a href="/" class="d-flex align-items-center justify-content-center justify-content-md-start mb-3 link-dark text-decoration-none">
-                        <h1>Logo</h1>
+                      <a href="<?php echo get_home_url(); ?>" class="logo-holder d-flex align-items-center col-md-3 mb-2 mb-md-0 text-dark text-decoration-none justify-content-center justify-content-md-start">
+                          <?php
+
+                          $custom_logo_id = get_theme_mod('custom_logo');
+                          $logo = wp_get_attachment_image_src($custom_logo_id, 'full');
+
+                          if (has_custom_logo()) {
+                              echo '<img src="' . esc_url($logo[0]) . '" class="main-menu-logo" alt="' . get_bloginfo('name') . '">';
+                          } else {
+                              echo '<h1>' . get_bloginfo('name') . '</h1>';
+                          }
+                          ?>
+                      </a>
                     </a>
                     <p class="text-muted">© 2021</p>
                 </div>

@@ -7,7 +7,7 @@
 <div class="container">
     <div class="row mt-5">
         <div class="col-md-5 col-sm-12">
-            <h2 class="mt-md-5 pt-md-5"><?php the_title(); ?></h2>
+            <h1 class="mt-md-5 pt-md-5"><?php the_title(); ?></h1>
             <div class="d-inline-block">
                 <?php
                 if (have_posts()) {
@@ -41,10 +41,9 @@
     <?php if (have_posts()): while (have_posts()) : the_post(); ?>
         <div class="row">
             <div class="col-md-9 col-sm-12">
-                <p><?php the_content(); ?></p>
+                <div class="single-post-content"> <?php the_content(); ?> </div>
 
                 <br>
-                Comment section
                 <!--Comments section -->
                 <?php comments_template(); ?>
 
@@ -56,6 +55,7 @@
                 $categories = get_the_category();
                 foreach($categories as $cat){
 //                    echo $cat->slug;
+                // Related post
                     $cat_list .= $cat->slug . ',';
                 }
                 ?>
@@ -72,10 +72,10 @@
 
                 // The Loop
                 if ($the_query->have_posts()) {
-                    echo '<ul>';
+                    echo '<ul class="list-group">';
                     while ($the_query->have_posts()) {
                         $the_query->the_post();
-                        echo '<li>' . get_the_title() . '</li>';
+                        echo '<li class="list-group-item bg-transparent"><a href="'. get_permalink() .'" class="text-decoration-none text-white">' . get_the_title() . '</a></li>';
                     }
                     echo '</ul>';
                 } else {
@@ -110,7 +110,7 @@
  * @views count
  * Save views from this single post page to show the same post in popular post
  */
-thesportworship_save_post_views(get_the_ID());
+thesportsanctum_save_post_views(get_the_ID());
 ?>
 
 

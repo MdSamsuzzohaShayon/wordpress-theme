@@ -1,5 +1,5 @@
 <?php
-class Thesportworship_Top_Menu_Walker extends Walker {
+class Thesportsanctum_Top_Menu_Walker extends Walker {
     /**
      * What the class handles.
      *
@@ -279,7 +279,7 @@ class Thesportworship_Top_Menu_Walker extends Walker {
  * Feature menu walker class
  */
 
-class Thesportworship_Feature_Menu_Walker extends Walker {
+class Thesportsanctum_Feature_Menu_Walker extends Walker {
     /**
      * What the class handles.
      *
@@ -520,7 +520,7 @@ class Thesportworship_Feature_Menu_Walker extends Walker {
          */
 //        $menu_item->description
 
-        $item_output .= '<p>' . $menu_item->description . '</p>';
+        $item_output .= '<p class="d-none d-md-block">' . $menu_item->description . '</p>';
         $item_output .= '</a>';
         $item_output .= $args->after;
 

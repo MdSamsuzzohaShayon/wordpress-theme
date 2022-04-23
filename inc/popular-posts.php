@@ -2,9 +2,9 @@
 /**
  * @function this function will be used in single.php to get the viewer from the post
  */
-function thesportworship_save_post_views($postID)
+function thesportsanctum_save_post_views($postID)
 {
-    $metaKey = 'tsw_post_views';
+    $metaKey = 'tss_post_views';
     $views = get_post_meta($postID, $metaKey, true);
 
     $count = (empty($views) ? 0 : $views);
@@ -36,12 +36,12 @@ remove_action('wp_head', 'adjacent_posts_rel_link_wp_head', 10, 0);
 /**
  * @sidebar Popular posts sidebar
  */
-function thesportworship_popular_post_sidebar()
+function thesportsanctum_popular_post_sidebar()
 {
     register_sidebar(array(
-        'name' => __('Popular sidebar', 'thesportworship'),
+        'name' => __('Popular sidebar', 'thesportsanctum'),
         'id' => 'sidebar-popular',
-        'description' => __('Widgets in this area will be shown on all popular posts.', 'thesportworship'),
+        'description' => __('Widgets in this area will be shown on all popular posts.', 'thesportsanctum'),
 //        'before_widget' => '"<li id="%1$s" class="widget %2$s">"',
         'before_widget' => '',
         'after_widget' => '',
@@ -50,7 +50,7 @@ function thesportworship_popular_post_sidebar()
     ));
 }
 
-add_action('widgets_init', 'thesportworship_popular_post_sidebar');
+add_action('widgets_init', 'thesportsanctum_popular_post_sidebar');
 
 
 
@@ -70,7 +70,7 @@ add_action('widgets_init', 'thesportworship_popular_post_sidebar');
 /**
  * @widget for registering a widget and add different property in widgets
  */
-class TSW_Popular_Posts_Widgets extends WP_Widget
+class TSS_Popular_Posts_Widgets extends WP_Widget
 {
 
     /**
@@ -79,10 +79,10 @@ class TSW_Popular_Posts_Widgets extends WP_Widget
     public function __construct()
     {
         $widget_ops = array(
-            'classname' => 'tsw-popular-posts-widgets',
+            'classname' => 'tss-popular-posts-widgets',
             'description' => 'Popular Posts Widgets',
         );
-        parent::__construct('popular_posts', 'TSW Popular Posts', $widget_ops);
+        parent::__construct('popular_posts', 'TSS Popular Posts', $widget_ops);
     }
 
     /**
@@ -98,7 +98,7 @@ class TSW_Popular_Posts_Widgets extends WP_Widget
         $post_args = array(
             'post_type' => 'post',
             'posts_per_page' => $tot,
-            'meta_key' => 'tsw_post_views',
+            'meta_key' => 'tss_post_views',
             'orderby' => 'meta_value_num',
             'order' => 'DESC'
         );
@@ -183,7 +183,7 @@ class TSW_Popular_Posts_Widgets extends WP_Widget
 }
 
 add_action('widgets_init', function () {
-    register_widget('TSW_Popular_Posts_Widgets');
+    register_widget('TSS_Popular_Posts_Widgets');
 });
 
 

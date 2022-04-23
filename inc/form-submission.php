@@ -3,7 +3,7 @@
  * Contact form submission
  */
 
-function thesportworship_contact_form()
+function thesportsanctum_contact_form()
 {
 //    wp_send_json_success("It works");
 //    $data = json_encode($_POST);
@@ -59,6 +59,6 @@ function thesportworship_contact_form()
 
 }
 
-add_action('wp_ajax_contact', 'thesportworship_contact_form');
-add_action('wp_ajax_nopriv_contact', 'thesportworship_contact_form');
+add_action('wp_ajax_contact', 'thesportsanctum_contact_form');
+add_action('wp_ajax_nopriv_contact', 'thesportsanctum_contact_form');
 ?>

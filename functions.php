@@ -1,6 +1,4 @@
-
 <?php
-
 if ( function_exists( 'add_theme_support' ) ) {
     add_theme_support( 'post-thumbnails' );
     add_theme_support('title-tag');
@@ -36,7 +34,7 @@ if ( function_exists( 'add_theme_support' ) ) {
 
 
 // ENQUEUE
-function thesportworship_enqueue_style(){
+function thesportsanctum_enqueue_style(){
     // Fonts
     wp_enqueue_style( 'bellefier-font', get_theme_file_uri("/assets/fonts/Bellefair-Regular.ttf"), array(), '1.0.0' );
     wp_enqueue_style( 'bebas-neue-font', get_theme_file_uri("/assets/fonts/BebasNeue-Regular.ttf"), array(), '1.0.0' );
@@ -47,17 +45,17 @@ function thesportworship_enqueue_style(){
     wp_enqueue_style( 'stylesheet', get_stylesheet_uri());
     wp_enqueue_style( 'custom-bootstrap-and-main', get_theme_file_uri("/assets/css/style.css"), array(), '1.0.0' );
 }
-add_action("wp_enqueue_scripts", "thesportworship_enqueue_style");
+add_action("wp_enqueue_scripts", "thesportsanctum_enqueue_style");
 
 
 
-function thesportworship_enqueue_script(){
+function thesportsanctum_enqueue_script(){
 //    wp_enqueue_script( 'bootstrap-js', get_theme_file_uri("/assets/js/bootstrap.bundle.min.js"), array(), '5.0.0' );
     wp_enqueue_script( 'axios-js', 'https://unpkg.com/axios/dist/axios.min.js', array(), '5.0.0' );
     wp_enqueue_script( 'bootstrap-js', get_theme_file_uri('/assets/js/bootstrap.min.js'), array(), '5.0.0' );
     wp_enqueue_script( 'main-js', get_theme_file_uri("/assets/js/main.js"), array(), '1.0.0' );
 }
-add_action("wp_enqueue_scripts", "thesportworship_enqueue_script");
+add_action("wp_enqueue_scripts", "thesportsanctum_enqueue_script");
 
 
 
@@ -76,15 +74,15 @@ require_once(get_template_directory() . "/inc/menu-registration-filter.php");
 
 
 require_once(get_template_directory() . "/inc/customize-author-information.php");
-new TheSportWorship_Author_Customizer();
+new TheSportSanctum_Author_Customizer();
 
 
 
 
 require_once(get_template_directory() . "/inc/menu-walker-class.php");
 
+require_once(get_template_directory() . "/inc/comments-walker-class.php");
 
-require_once(get_template_directory() . "/inc/customize-menu-position.php");
 
 require_once(get_template_directory() . "/inc/customize-header-caption.php");
 

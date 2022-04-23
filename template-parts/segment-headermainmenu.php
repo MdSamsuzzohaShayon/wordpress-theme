@@ -3,7 +3,7 @@
     <div class="container">
         <!--        main navbar start -->
         <div class="d-flex flex-wrap align-items-center justify-content-start justify-content-md-between py-3 bg-transparent">
-            <a href="<?php echo get_home_url(); ?>" class="d-flex align-items-center col-md-3 mb-2 mb-md-0 text-dark text-decoration-none">
+            <a href="<?php echo get_home_url(); ?>" class="logo-holder d-flex align-items-center col-md-3 mb-2 mb-md-0 text-dark text-decoration-none justify-content-center justify-content-md-start">
                 <?php
 
                 $custom_logo_id = get_theme_mod('custom_logo');
@@ -18,16 +18,18 @@
             </a>
 
             <?php
-            wp_nav_menu(array(
-                'theme_location' => 'main_menu',
-                'container' => 'ul',
-                'menu_class' => 'nav col-12 col-md-auto mb-2 justify-content-center flex-sm-row flex-column mb-md-0',
-                'add_li_class' => '',
-                'add_a_class' => 'nav-link px-2 text-white text-uppercase',
-            ));
+            if(has_nav_menu('main_menu')){
+              wp_nav_menu(array(
+                  'theme_location' => 'main_menu',
+                  'container' => 'ul',
+                  'menu_class' => 'nav col-12 col-md-auto mb-2 justify-content-md-center justify-content-between flex-sm-row flex-column align-items-center align-items-md-start mb-md-0',
+                  'add_li_class' => '',
+                  'add_a_class' => 'nav-link px-2 text-white text-uppercase',
+              ));
+            }
             ?>
 
-            <div class="col-md-3 text-end">
+            <div class="col-12 col-md-3 text-end">
 <!--                handled by searchform.php-->
                 <?php get_search_form(); ?>
             </div>

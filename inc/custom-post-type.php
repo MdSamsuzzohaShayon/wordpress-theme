@@ -2,11 +2,11 @@
 /**
  * Add story post type for different players' life story and more
  */
-function thesportworship_stories(){
+function thesportsanctum_stories(){
     register_post_type('stories', array(
         'labels' => array(
-            'name' => __('Stories', 'thesportworship'),
-            'singular_name' => __('Story', 'thesportworship'),
+            'name' => __('Stories', 'thesportsanctum'),
+            'singular_name' => __('Story', 'thesportsanctum'),
         ),
         'menu_icon' => 'dashicons-media-document',
         'public' => true,
@@ -15,10 +15,10 @@ function thesportworship_stories(){
     ));
 }
 
-add_action('init', 'thesportworship_stories');
+add_action('init', 'thesportsanctum_stories');
 
 
-function thesportworship_texonomy(){
+function thesportsanctum_texonomy(){
     register_taxonomy('story_type', array('stories'), array(
         'labels' => array(
             'name' => "StoriesType",
@@ -28,7 +28,7 @@ function thesportworship_texonomy(){
 //        'hierarchical' => false
     ));
 }
-add_action('init', 'thesportworship_texonomy');
+add_action('init', 'thesportsanctum_texonomy');
 
 
 
@@ -39,11 +39,11 @@ add_action('init', 'thesportworship_texonomy');
 /**
  * Add tournament post type for different tournament update
  */
-function thesportworship_tournaments(){
+function thesportsanctum_tournaments(){
     register_post_type('tournaments', array(
         'labels' => array(
-            'name' => __('Tournaments', 'thesportworship'),
-            'singular_name' => __('Tournament', 'thesportworship'),
+            'name' => __('Tournaments', 'thesportsanctum'),
+            'singular_name' => __('Tournament', 'thesportsanctum'),
         ),
         'menu_icon' => 'dashicons-table-row-before',
         'public' => true,
@@ -52,10 +52,10 @@ function thesportworship_tournaments(){
     ));
 }
 
-add_action('init', 'thesportworship_tournaments');
+add_action('init', 'thesportsanctum_tournaments');
 
 
-function thesportworship_tournaments_type(){
+function thesportsanctum_tournaments_type(){
     register_taxonomy('tournament_type', array('tournaments'), array(
         'labels' => array(
             'name' => "TournamentsType",
@@ -65,7 +65,7 @@ function thesportworship_tournaments_type(){
 //        'hierarchical' => false
     ));
 }
-add_action('init', 'thesportworship_tournaments_type');
+add_action('init', 'thesportsanctum_tournaments_type');
 
 
 
@@ -76,11 +76,11 @@ add_action('init', 'thesportworship_tournaments_type');
  * All transfer news of football
  * There are no post type for this type of post
  */
-function thesportworship_transfer_news(){
+function thesportsanctum_transfer_news(){
     register_post_type('transfers', array(
         'labels' => array(
-            'name' => __('Transfers', 'thesportworship'),
-            'singular_name' => __('Transfer', 'thesportworship'),
+            'name' => __('Transfers', 'thesportsanctum'),
+            'singular_name' => __('Transfer', 'thesportsanctum'),
         ),
         'menu_icon' => 'dashicons-controls-repeat',
         'public' => true,
@@ -89,5 +89,5 @@ function thesportworship_transfer_news(){
     ));
 }
 
-add_action('init', 'thesportworship_transfer_news');
+add_action('init', 'thesportsanctum_transfer_news');
 ?>

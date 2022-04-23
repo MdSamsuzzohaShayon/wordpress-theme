@@ -1,11 +1,11 @@
 <?php get_header('home'); ?>
-<!-- <div class="main-header-body-wrapper" style="background-image: url(<?php //echo get_theme_mod("thesportworship_banner"); ?>);"> -->
+<!-- <div class="main-header-body-wrapper" style="background-image: url(<?php //echo get_theme_mod("thesportsanctum_banner"); ?>);"> -->
 
 
 <!-- MAIN SECTION START  -->
 <div class="main-body background-transparent">
 
-    <?php get_template_part('template-parts/content', 'caption'); ?>
+    <?php get_template_part('template-parts/segment', 'homecaption'); ?>
 
 </div>
 <!-- MAIN SECTION ENDS  -->

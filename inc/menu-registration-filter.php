@@ -2,15 +2,15 @@
 
 
 
-function thesportworship_register_menus(){
+function thesportsanctum_register_menus(){
     register_nav_menus( array(
-        'top_menu' => __( 'Top Menu', 'thesportworship' ),
-        'main_menu'  => __( 'Main Menu', 'thesportworship' ),
-        'feature_menu'  => __( 'Feature Menu', 'thesportworship' ),
-        'footer_menu'  => __( 'Footer Menu', 'thesportworship' ),
+        'top_menu' => __( 'Top Menu', 'thesportsanctum' ),
+        'main_menu'  => __( 'Main Menu', 'thesportsanctum' ),
+        'feature_menu'  => __( 'Feature Menu', 'thesportsanctum' ),
+        'footer_menu'  => __( 'Footer Menu', 'thesportsanctum' ),
     ) );
 }
-add_action( 'after_setup_theme', 'thesportworship_register_menus', 0 );
+add_action( 'after_setup_theme', 'thesportsanctum_register_menus', 0 );
 
 function add_additional_li_class($classes, $item, $args){
     /**

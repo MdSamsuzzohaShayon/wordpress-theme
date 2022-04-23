@@ -2,7 +2,7 @@
 
 
 // Numeric Page Navi
-function thesportworship_customize_pagination($before = '', $after = '')
+function thesportsanctum_customize_pagination($before = '', $after = '')
 {
     global $wpdb, $wp_query;
     $request = $wp_query->request;

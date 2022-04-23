@@ -6,6 +6,27 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
     <meta name="description" content="<?php bloginfo('description'); ?>">
+    <!-- Meta keywords attribute - a series of keywords deem relevant to the page in question. -->
+    <?php
+    $categories = get_categories( array(
+        'orderby' => 'name',
+        'order'   => 'ASC'
+    ) );
+    $category_list = '';
+    foreach($categories as $category){
+      $category_list .= $category->name . ',';
+    }
+    ?>
+
+    <meta name="keywords" content="<?php echo $category_list ?>">
+    <?php
+    $categories = get_categories( array(
+        'orderby' => 'name',
+        'order'   => 'ASC'
+    ) );
+    // echo $categories;
+    ?>
+    <meta name="keywords" content="<?php echo $categories; ?>">
     <title>
         <?php bloginfo('name'); ?> |
         <?php is_front_page() ? bloginfo('description') : wp_title(); ?>

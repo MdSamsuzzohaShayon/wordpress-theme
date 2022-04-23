@@ -6,6 +6,26 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
     <meta name="description" content="<?php bloginfo('description'); ?>">
+    <?php
+    $tag_list = '';
+    global $post;
+    $posttags = get_tags();
+    if ($posttags) {
+      foreach($posttags as $tag) {
+        $tag_list .= $tag->name . ',';
+      }
+    }
+    ?>
+
+    <meta name="keywords" content="<?php echo $tag_list; ?>">
+    <?php
+    global $post;
+    $author_id = $post->post_author;
+    $fname = get_the_author_meta('first_name', $author_id);
+    $lname = get_the_author_meta('last_name', $author_id);
+    $author_name = $fname . "-" . $lname;
+    ?>
+    <meta name="author" content="<?php echo $author_name; ?>">
     <title>
         <?php bloginfo('name'); ?> |
         <?php is_front_page() ? bloginfo('description') : wp_title(); ?>

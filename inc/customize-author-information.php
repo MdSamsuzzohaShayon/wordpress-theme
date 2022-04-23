@@ -1,5 +1,5 @@
 <?php
-class TheSportWorship_Author_Customizer {
+class TheSportsanctum_Author_Customizer {
     public function __construct() {
         add_action( 'customize_register', array( $this, 'register_customize_sections' ) );
     }
@@ -107,6 +107,3 @@ class TheSportWorship_Author_Customizer {
         )));
     }
 }
-
-
-
