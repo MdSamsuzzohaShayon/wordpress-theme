@@ -5,7 +5,7 @@
       wp_nav_menu(array(
          'theme_location' => 'feature_menu',
          'container' => '',
-         'menu_class' => 'nav col-12 col-lg-auto my-2 justify-content-center justify-content-md-between my-md-0 text-small',
+         'menu_class' => 'd-flex justify-content-around align-items-center flex-wrap flex-lg-nowrap',
          'walker' => new Thesportsanctum_Feature_Menu_Walker()
      ));
     }

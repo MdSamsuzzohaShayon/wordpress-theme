@@ -11132,35 +11132,24 @@ body {
   background-size: cover;
   background-repeat: no-repeat;
 }
-.landing-main-menu .main-menu {
-  background-color: rgba(45, 47, 65, 0.72);
-}
-.landing-main-menu .main-menu a {
-  font-family: "Bebas Neue", cursive !important;
-  font-size: 1rem;
-}
-@media (max-width: 768px) {
-  .landing-main-menu .main-menu a {
-    font-size: 0.8rem;
-  }
-}
-.landing-main-menu .caption-main {
+
+.caption-main {
   height: 590px;
   font-family: "Playfair Display", serif;
 }
-.landing-main-menu .caption-main h2, .landing-main-menu .caption-main .h2 {
-  font-family: "Bebas Neue", cursive;
+.caption-main h2, .caption-main .h2 {
+  font-family: "El Messiri", sans-serif;
   font-size: 2.5rem;
-  font-weight: 700;
+  font-weight: bold;
 }
-.landing-main-menu .caption-main p {
+.caption-main p {
   font-size: 1rem;
 }
 @media (max-width: 768px) {
-  .landing-main-menu .caption-main {
+  .caption-main {
     height: 400px;
   }
-  .landing-main-menu .caption-main h2, .landing-main-menu .caption-main .h2 {
+  .caption-main h2, .caption-main .h2 {
     font-size: 2rem;
   }
 }
@@ -11175,8 +11164,14 @@ body {
   background-color: rgba(45, 47, 65, 0.72);
 }
 .main-menu a {
-  font-family: "Bellefair", serif;
-  font-size: 1.2rem;
+  font-family: "El Messiri", sans-serif;
+  font-weight: bold;
+  font-size: 1rem;
+}
+@media (max-width: 768px) {
+  .main-menu a {
+    font-size: 0.8rem;
+  }
 }
 .main-menu .logo-holder {
   width: fit-content;
@@ -11271,10 +11266,10 @@ body {
   width: 100%;
 }
 .feature-post-segment .feature-post-shape .cat-features .nav-link {
-  width: 300px;
+  width: fit-content;
 }
 .feature-post-segment .feature-post-shape .cat-features .nav-link img {
-  width: 25%;
+  width: 40%;
 }
 .feature-post-segment .feature-post-shape .cat-features h3, .feature-post-segment .feature-post-shape .cat-features .h3 {
   color: #C56375;
@@ -11301,7 +11296,7 @@ body {
     padding-top: 8%;
   }
   .feature-post-segment .feature-post-shape .cat-features .nav-link img {
-    width: 10%;
+    width: 30%;
   }
   .feature-post-segment .feature-post-shape .cat-features h3, .feature-post-segment .feature-post-shape .cat-features .h3 {
     color: #C56375;

@@ -217,8 +217,16 @@ class Thesportsanctum_Top_Menu_Walker extends Walker {
          */
         $title = apply_filters( 'nav_menu_item_title', $title, $menu_item, $args, $depth );
 
+        // var_dump($menu_item->classes);
+        $classes_str = "";
+        $classes   = empty( $menu_item->classes ) ? array() : (array) $menu_item->classes;
+        // var_dump($classes);
+        foreach($classes as $cls){
+          $classes_str = $classes_str . ' ' . $cls;
+        }
         $item_output  = $args->before;
-        $item_output .= '<i class="top-menu-icon ' . $menu_item->description . '"></i>';
+        // $item_output .= '<i class="top-menu-icon ' . $menu_item->description . '"></i>';
+        $item_output .= '<i class="top-menu-icon ' . $classes_str . '"></i>';
         $item_output .= '<a' . $attributes . '>';
         $item_output .= $args->link_before . $title . $args->link_after;
         $item_output .= '</a>';

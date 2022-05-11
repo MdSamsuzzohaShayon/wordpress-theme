@@ -11,6 +11,8 @@ document.addEventListener('DOMContentLoaded', (e) => {
     const listHeading = latestPopular ?  latestPopular.querySelectorAll('.list-heading') : null;
     const cricketPost = document.querySelector('.cricket-post');
     const contactForm = document.getElementById('contact-form');
+    const siteWrapper  = document.querySelector('.site-wrapper');
+    const allContainers = document.querySelectorAll('.container');
 
 
 
@@ -159,10 +161,32 @@ document.addEventListener('DOMContentLoaded', (e) => {
                     // console.log(fic);
                 });
             }
-
-
-
         }
+
+        /**
+         * @resize observer
+         * When window width will be changed do something
+         */
+         // const temp = document.createElement('p');
+         // temp.setAttribute('class', 'alert alert-danger');
+         // siteWrapper.insertBefore(temp, siteWrapper.children[0]);
+         const resizeObserver = new ResizeObserver((entries) => {
+            for (entry of entries) {
+
+                // get the height and width of the element
+                console.log('Height: ', entry.contentRect.height);
+                console.log('Width:', entry.contentRect.width);
+                // temp.textContent = "Width: " + entry.contentRect.width;
+                if(entry.contentRect.width <= 1520 && entry.contentRect.width >= 1220){
+                  allContainers.forEach(con=> con.style.width = '75%');
+                }else{
+                  allContainers.forEach(con=> con.style.width = '100%');
+                }
+            }
+        });
+
+        // observe the given element for changes
+        resizeObserver.observe(siteWrapper);
 
 
         if(listHeading){
@@ -292,6 +316,3 @@ const substractCharecterContent =(container, selector, MAX_CHAR)=>{
         });
     }
 }
-
-
-
