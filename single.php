@@ -1,9 +1,7 @@
 <?php get_header('singlepost'); ?>
-
 <!--    https://dribbble.com/shots/4206746-Ramp-Space-Single-blog-post-->
 <!--    https://dribbble.com/shots/7598388-Blog-Post-->
 <!--    https://dribbble.com/shots/4349968/attachments/4349968-MITALENT-Single-Blog?mode=media-->
-
 <div class="container">
     <div class="row mt-5">
         <div class="col-md-5 col-sm-12">
@@ -91,8 +89,9 @@
                 <p>Tags</p>
                 <div class="all-tags d-flex justify-content-between flex-wrap">
                     <?php
-                    $tags = get_tags();
-                    foreach ($tags as $tag): ?>
+                    $post_id = get_the_ID();
+                    $post_tags = get_the_tags($post_id);
+                    foreach ($post_tags as $tag): ?>
                         <?php $tag_link = get_tag_link($tag->term_id); ?>
                         <a href="<?php echo $tag_link; ?>"
                            class="badge bg-secondary py-2 px-3 rounded-0 my-1 text-decoration-none text-light"><?php echo $tag->name; ?></a>

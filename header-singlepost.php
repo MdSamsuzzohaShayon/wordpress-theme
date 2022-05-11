@@ -5,13 +5,17 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
-    <meta name="description" content="<?php bloginfo('description'); ?>">
+    <?php
+        $post_id = get_the_ID();
+    $desc = get_the_excerpt($post_id);
+     ?>
+    <meta name="description" content="<?php echo $desc; ?>">
     <?php
     $tag_list = '';
-    global $post;
     $posttags = get_tags();
-    if ($posttags) {
-      foreach($posttags as $tag) {
+    $post_tags = get_the_tags($post_id);
+    if ($post_tags) {
+      foreach($post_tags as $tag) {
         $tag_list .= $tag->name . ',';
       }
     }
