@@ -46,7 +46,7 @@ document.addEventListener('DOMContentLoaded', (e) => {
      */
     if(featureItems){
         if(featureItems.length > 0){
-            featureItemHeadingSubStr(featureItems, true, 62);
+            featureItemHeadingSubStr(featureItems, true, 78);
 
             if(featureItems[0]){
                 featureItems[0].querySelector('.desc').nextElementSibling.classList.remove('mx-2');
@@ -134,7 +134,7 @@ document.addEventListener('DOMContentLoaded', (e) => {
                  * This is for small screen
                  */
 
-                featureItemHeadingSubStr(featureItems, false, 62);
+                featureItemHeadingSubStr(featureItems, false, 80);
 
                 if(latestPopular){
                     const latestPost = latestPopular.querySelector('.latest-post');
@@ -312,7 +312,7 @@ const substractCharecterContent =(container, selector, MAX_CHAR)=>{
     if(container){
         const elements = container.querySelectorAll(selector);
         elements.forEach((elem, i)=>{
-            elem.textContent = elem.textContent.toString().length > MAX_CHAR ? elem.textContent.toString().substring(0, MAX_CHAR) + '...' : elem.textContent;
+            // elem.textContent = elem.textContent.toString().length > MAX_CHAR ? elem.textContent.toString().substring(0, MAX_CHAR) + '...' : elem.textContent;
         });
     }
 }
