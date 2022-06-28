@@ -19,7 +19,7 @@
                 <a class="text-decoration-none text-white" href="<?php echo the_permalink(); ?>">
                     <img src="<?php echo $img_url ; ?>" class="card-img-top" alt="...">
                     <div class="card-body px-0">
-                        <h5 class="card-title"><?php the_title(); ?></h5>
+                        <h3 class="card-title"><?php the_title(); ?></h3>
                         <p class="card-text text-white latest-desc"><?php the_excerpt(); ?></p>
                         <small class="text-muted">Posted: <?php echo get_the_date('F j, Y') ; ?>  at <?php the_time('g:i a'); ?></small>
                     </div>
@@ -34,7 +34,3 @@
 
 
 </div>
-
-
-
-

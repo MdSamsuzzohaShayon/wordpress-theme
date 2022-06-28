@@ -46,7 +46,7 @@ document.addEventListener('DOMContentLoaded', (e) => {
      */
     if(featureItems){
         if(featureItems.length > 0){
-            featureItemHeadingSubStr(featureItems, true, 78);
+            featureItemHeadingSubStr(featureItems, true, 70);
 
             if(featureItems[0]){
                 featureItems[0].querySelector('.desc').nextElementSibling.classList.remove('mx-2');
@@ -145,7 +145,7 @@ document.addEventListener('DOMContentLoaded', (e) => {
 
 
                 features.querySelector('.desc').remove();
-                const heading = features.querySelectorAll('h5');
+                const heading = features.querySelectorAll('h3');
                 heading.forEach((hi, i)=>{
                     hi.classList.remove('mx-2');
                     hi.nextElementSibling.classList.remove('mx-2');
@@ -204,7 +204,7 @@ document.addEventListener('DOMContentLoaded', (e) => {
 
         // Cricket posts
         if(cricketPost){
-            const cPostHeading =cricketPost.getElementsByTagName('h5');
+            const cPostHeading =cricketPost.getElementsByTagName('h3');
             const cPostContent =cricketPost.getElementsByTagName('p');
             Array.from(cPostHeading).forEach((cp, i)=>{
                 cp.textContent = cp.textContent.toString().substring(0, 50);
@@ -291,7 +291,7 @@ const displayModal = (e) => {
 
 const featureItemHeadingSubStr=(featureItems, firstItemBlock, MAX_CHAR)=>{
     featureItems.forEach((fi, i)=>{
-        const heading = fi.querySelector('h5');
+        const heading = fi.querySelector('h3');
         if(firstItemBlock === true){
             if(i !== 0){
                 if(heading.textContent.toString().length > MAX_CHAR){

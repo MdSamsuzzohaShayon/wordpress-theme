@@ -12,8 +12,7 @@ $input-border-width: 0;
 
 // stylelint-enable value-keyword-case
 $h5-font-size:                $font-size-base * 1;
-
-
+$h3-font-size:                $font-size-base * 1.2;
 
 
 
@@ -30,7 +29,11 @@ $border-color: rgba(114, 114, 128, 0.3);
 
 @import "../bootstrap/scss/bootstrap.scss";
 
-
+p{
+  font-size: 0.86rem;
+  font-family: 'Caudex', serif;
+  // color: #C4C9F8 ;
+}
 
 
 $utilities: map-merge(
@@ -132,11 +135,13 @@ body{
     font-family: $playfair;
     h2{
       font-family: $caption;
-      font-size: 2.5rem;
+      font-size: 4rem;
       font-weight: bold;
+       text-shadow: 0px 2px 2px rgba(0, 0, 0, 0.4);
     }
     p{
       font-size: 1rem;
+     text-shadow: 0px 2px 2px rgba(0, 0, 0, 0.4);
     }
     @media(max-width: $br-md){
       height: 400px;
@@ -239,7 +244,7 @@ body{
         object-fit: cover;
         object-position: center;
       }
-      h5{
+      h3{
         margin-top: 10px;
         margin-left: 0 !important;
         margin-right: 0 !important;

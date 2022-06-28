@@ -36,12 +36,12 @@
 
             echo '
                     <div class="col-sm-12">
-                        <a class="stretched-link text-white row p-0 m-0 f-item" href="' . get_permalink() . '">
+                        <a class="stretched-link row p-0 m-0 f-item" href="' . get_permalink() . '">
                             <div class="col-md-4 m-0 txt-img p-0">
                                 <img src="' . $img_url . '"     alt="...">
                             </div>
                             <div class="col-md-8 p-0 txt-img d-flex justify-content-between flex-column">
-                                <h5 class="mx-2" >' . get_the_title() . '</h5>
+                                <h3 class="mx-2 text-white" >' . get_the_title() . '</h3>
                                 '. $desc .'
                                 <p class="p-0 mb-0 mx-2" ><small class="text-muted">Posted: ' . $post_date . ' at ' . $post_time . '</small></p>
                             </div>
@@ -62,4 +62,3 @@
 
 
 </div>
-

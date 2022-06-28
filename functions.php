@@ -36,10 +36,11 @@ if ( function_exists( 'add_theme_support' ) ) {
 // ENQUEUE
 function thesportsanctum_enqueue_style(){
     // Fonts
-    wp_enqueue_style( 'bellefier-font', get_theme_file_uri("/assets/fonts/Bellefair-Regular.ttf"), array(), '1.0.0' );
+    // wp_enqueue_style( 'bellefier-font', get_theme_file_uri("/assets/fonts/Bellefair-Regular.ttf"), array(), '1.0.0' );
     wp_enqueue_style( 'elmessiri-regular-font', get_theme_file_uri("/assets/fonts/ElMessiri-Regular.ttf"), array(), '1.0.0' );
     wp_enqueue_style( 'elmessiri-bold-font', get_theme_file_uri("/assets/fonts/ElMessiri-Bold.ttf"), array(), '1.0.0' );
     wp_enqueue_style( 'playfair-display-regular', get_theme_file_uri("/assets/fonts/PlayfairDisplay-Regular.ttf"), array(), '1.0.0' );
+    wp_enqueue_style( 'caudex-regular', get_theme_file_uri("/assets/fonts/Caudex-Regular.ttf"), array(), '1.0.0' );
     // Icons
     wp_enqueue_style( 'bootstrap-icons', get_theme_file_uri("/assets/icon/bootstrap-icons/bootstrap-icons.css"), array(), '1.0.0' );
     // CSS

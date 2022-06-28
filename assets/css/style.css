@@ -122,12 +122,7 @@ h2, .h2 {
 }
 
 h3, .h3 {
-  font-size: calc(1.3rem + 0.6vw);
-}
-@media (min-width: 1200px) {
-  h3, .h3 {
-    font-size: 1.75rem;
-  }
+  font-size: 1.2rem;
 }
 
 h4, .h4 {
@@ -7416,7 +7411,7 @@ textarea.form-control-lg {
 }
 
 .fs-3 {
-  font-size: calc(1.3rem + 0.6vw) !important;
+  font-size: 1.2rem !important;
 }
 
 .fs-4 {
@@ -11041,10 +11036,6 @@ textarea.form-control-lg {
     font-size: 2rem !important;
   }
 
-  .fs-3 {
-    font-size: 1.75rem !important;
-  }
-
   .fs-4 {
     font-size: 1.5rem !important;
   }
@@ -11090,6 +11081,11 @@ textarea.form-control-lg {
     display: none !important;
   }
 }
+p {
+  font-size: 0.86rem;
+  font-family: "Caudex", serif;
+}
+
 body {
   background-color: #030015;
 }
@@ -11139,11 +11135,13 @@ body {
 }
 .caption-main h2, .caption-main .h2 {
   font-family: "El Messiri", sans-serif;
-  font-size: 2.5rem;
+  font-size: 4rem;
   font-weight: bold;
+  text-shadow: 0px 2px 2px rgba(0, 0, 0, 0.4);
 }
 .caption-main p {
   font-size: 1rem;
+  text-shadow: 0px 2px 2px rgba(0, 0, 0, 0.4);
 }
 @media (max-width: 768px) {
   .caption-main {
@@ -11223,7 +11221,7 @@ body {
   object-fit: cover;
   object-position: center;
 }
-.feature-post-segment .feature-post-shape .feature-lg-img h5, .feature-post-segment .feature-post-shape .feature-lg-img .h5 {
+.feature-post-segment .feature-post-shape .feature-lg-img h3, .feature-post-segment .feature-post-shape .feature-lg-img .h3 {
   margin-top: 10px;
   margin-left: 0 !important;
   margin-right: 0 !important;
