@@ -23,7 +23,7 @@ document.addEventListener('DOMContentLoaded', (e) => {
 
 
     /**
-     * @word Change first word text color
+     * @word color Change of main heading
      * */
     if (headingCaption) {
         const content = headingCaption.textContent.toString().split(/\W/).filter(c => c !== '');
@@ -42,6 +42,7 @@ document.addEventListener('DOMContentLoaded', (e) => {
 
 
     /**
+     * @validate heading charecter
      * Make sure that header is not more than 32 character long
      */
     if(featureItems){
@@ -77,8 +78,8 @@ document.addEventListener('DOMContentLoaded', (e) => {
                 newFeatures.setAttribute('class', 'row features mt-5');
 
                 const heading2 = document.createElement('h2');
-                heading2.setAttribute( 'class', 'text-danger text-center');
-                heading2.textContent = "Features";
+                heading2.setAttribute( 'class', 'text-danger text-center mb-5');
+                heading2.textContent = "Featured Posts";
                 newFeatures.appendChild(heading2);
 
                 const lgColumn = document.createElement('div');
@@ -218,6 +219,7 @@ document.addEventListener('DOMContentLoaded', (e) => {
 
 
     /**
+     * @incomplete
      * @form
      * Contact form submission
      */

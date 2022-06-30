@@ -122,7 +122,7 @@ h2, .h2 {
 }
 
 h3, .h3 {
-  font-size: 1.2rem;
+  font-size: 0.9rem;
 }
 
 h4, .h4 {
@@ -7411,7 +7411,7 @@ textarea.form-control-lg {
 }
 
 .fs-3 {
-  font-size: 1.2rem !important;
+  font-size: 0.9rem !important;
 }
 
 .fs-4 {
@@ -11081,20 +11081,43 @@ textarea.form-control-lg {
     display: none !important;
   }
 }
-p {
-  font-size: 0.86rem;
-  font-family: "Caudex", serif;
-}
-
 body {
   background-color: #030015;
 }
 
-.site-wrapper {
+.site-wrapper p {
+  font-size: 0.86rem;
   font-family: "Playfair Display", serif;
+}
+.site-wrapper h1, .site-wrapper .h1 {
+  font-family: "El Messiri", sans-serif;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+.site-wrapper h2, .site-wrapper .h2 {
+  font-family: "El Messiri", sans-serif;
+  font-weight: bold;
+  text-transform: uppercase;
+  font-size: 1rem;
+}
+.site-wrapper h3, .site-wrapper .h3 {
+  font-family: "Timmana", sans-serif;
+}
+@media (max-width: 768px) {
+  .site-wrapper h2, .site-wrapper .h2 {
+    font-size: 0.9rem;
+  }
+}
+@media (max-width: 1426px) {
+  .site-wrapper p {
+    font-size: 0.7rem;
+  }
 }
 .site-wrapper .text-justify {
   text-align: justify;
+}
+.site-wrapper .img-fluid {
+  width: 100%;
 }
 
 .top-menu, .top-navbar {
@@ -11131,12 +11154,9 @@ body {
 
 .caption-main {
   height: 590px;
-  font-family: "Playfair Display", serif;
 }
-.caption-main h2, .caption-main .h2 {
-  font-family: "El Messiri", sans-serif;
+.caption-main h1, .caption-main .h1 {
   font-size: 4rem;
-  font-weight: bold;
   text-shadow: 0px 2px 2px rgba(0, 0, 0, 0.4);
 }
 .caption-main p {
@@ -11184,15 +11204,7 @@ body {
 }
 
 .feature-post-segment {
-  height: 110%;
-  overflow-y: hidden;
-  font-family: "Playfair Display", serif;
-}
-@media (min-width: 768px) {
-  .feature-post-segment {
-    margin-top: -300px;
-    padding-top: 7%;
-  }
+  height: 140%;
 }
 .feature-post-segment h2, .feature-post-segment .h2 {
   color: #C56375 !important;
@@ -11204,7 +11216,7 @@ body {
   transform: skewY(7deg);
 }
 .feature-post-segment .feature-post-shape {
-  height: 110%;
+  height: 140%;
   background-image: linear-gradient(#232537, #030015);
   transform: skewY(-7deg);
 }
@@ -11267,7 +11279,7 @@ body {
   width: fit-content;
 }
 .feature-post-segment .feature-post-shape .cat-features .nav-link img {
-  width: 40%;
+  width: 60px;
 }
 .feature-post-segment .feature-post-shape .cat-features h3, .feature-post-segment .feature-post-shape .cat-features .h3 {
   color: #C56375;
@@ -11294,7 +11306,7 @@ body {
     padding-top: 8%;
   }
   .feature-post-segment .feature-post-shape .cat-features .nav-link img {
-    width: 30%;
+    width: 30px;
   }
   .feature-post-segment .feature-post-shape .cat-features h3, .feature-post-segment .feature-post-shape .cat-features .h3 {
     color: #C56375;
@@ -11305,6 +11317,7 @@ body {
 }
 @media (max-width: 768px) {
   .feature-post-segment {
+    padding-top: 7%;
     height: fit-content;
     transform: translateY(0px);
     padding-top: 0;
@@ -11324,15 +11337,12 @@ body {
     transform: translateY(0px);
   }
 }
-
 .latest-popular {
+  margin-top: 80px !important;
   z-index: 1;
 }
 .latest-popular h2, .latest-popular .h2 {
   color: #C56375 !important;
-}
-.latest-popular .latest-post {
-  font-family: "Playfair Display", serif;
 }
 .latest-popular .latest-post img {
   width: 100%;
@@ -11346,30 +11356,28 @@ body {
 .latest-popular .latest-post .card .card-title {
   color: #C56375 !important;
 }
-.latest-popular .popular-post .list-heading {
+
+.popular-post .list-heading {
   color: #C56375;
 }
-.latest-popular .popular-post ol {
+.popular-post ol {
   counter-reset: items;
 }
-.latest-popular .popular-post li {
+.popular-post li {
   display: block;
   counter-increment: items;
 }
-.latest-popular .popular-post li:before {
+.popular-post li:before {
   content: "0" counter(items) " ";
   color: #6c757d !important;
   font-size: 2rem;
 }
-.latest-popular .popular-post li:nth-child(n+8):before {
+.popular-post li:nth-child(n+8):before {
   content: "0" counter(items) " ";
 }
 
 .cricket-post .post {
   height: fit-content;
-}
-.cricket-post .post h3, .cricket-post .post .h3 {
-  font-family: "Playfair Display", serif !important;
 }
 .cricket-post img {
   width: 100%;
@@ -11401,7 +11409,10 @@ body {
 .blog-footer {
   width: 100%;
   background-color: rgba(45, 47, 65, 0.72);
-  font-family: "Bellefair", serif;
+}
+.blog-footer .nav-item a {
+  font-family: "El Messiri", sans-serif;
+  font-weight: bold;
 }
 .blog-footer .newsletter-input {
   background-color: #33364D !important;

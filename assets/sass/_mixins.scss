@@ -14,6 +14,12 @@
   }
 }
 
+@mixin heading-design{
+  font-family: $heading-1-font-family;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
 
 @mixin fit-post-image{
   width: 100%;

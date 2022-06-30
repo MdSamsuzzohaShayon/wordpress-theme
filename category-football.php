@@ -1,6 +1,6 @@
 <?php get_header(); ?>
 <div class="container">
-    <h2><?php echo single_cat_title(); ?></h2>
+    <h1 class="text-center mt-5"><?php echo $site_title . single_cat_title() . ' - ' . get_bloginfo('name'); ?></h1>
 
     <div class="category-cricket mt-5" id="category-cricket">
         <div class="row align-items-md-start">

@@ -521,7 +521,7 @@ class Thesportsanctum_Feature_Menu_Walker extends Walker {
         $menu_item->classes[0] !== '' && $menu_item->classes[0] ? $img_link= 'src="' . get_theme_file_uri('assets/icon/' . $menu_item->classes[0] .  '.svg"') : $img_link= '';
         $item_output .= '<img ' . $img_link . '" class="bi bi-alarm bi d-block mx-auto mb-1" />';
 
-        $item_output .= $args->link_before . "<h3>" . $title  . "</h3>" . $args->link_after;
+        $item_output .= $args->link_before . "<h2>" . $title  . "</h2>" . $args->link_after;
 
         /**
          * Add description for icon

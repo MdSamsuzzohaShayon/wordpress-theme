@@ -1,9 +1,9 @@
 <?php get_header(); ?>
 <div class="container">
-    <h2>This is search.php</h2>
-    <h2>Search results for '<?php echo get_search_query(); ?>'</h2>
+    <h1 class="my-5">Search results for '<?php echo get_search_query(); ?>'</h1>
     <h2><?php echo single_cat_title(); ?></h2>
-    <?php get_template_part("template-parts/content", 'archive'); ?>
+    <!-- <?php //get_template_part("template-parts/content", 'archive'); ?> -->
+    <?php get_template_part("template-parts/segment", 'archivesearch'); ?>
 
     <!--    Pagination-->
     <?php //previous_posts_link(); ?>

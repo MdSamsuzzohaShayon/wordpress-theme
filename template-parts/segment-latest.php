@@ -1,5 +1,5 @@
 <div class="row">
-    <h2 class="text-danger text-capitalize mb-5 sec-heading">Latest posts</h2>
+    <h2 class="text-danger mb-5 sec-heading">Latest posts</h2>
     <?php
     // Arguments
     $args = array('post_type' => 'post', 'posts_per_page' => 12);

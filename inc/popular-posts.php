@@ -108,7 +108,7 @@ class TSS_Popular_Posts_Widgets extends WP_Widget
         if(!empty($instance['title'])){
 //            echo $args['before_title'] ;
 //            echo $args['before_title'] . apply_filters('widget_title', $instance['title']) . $args['after_title'];
-            echo "<h2 class='text-danger text-capitalize mb-5 sec-heading'>" . apply_filters('widget_title', $instance['title']) . "</h2>";
+            echo "<h2 class='text-danger mb-5 sec-heading'>" . apply_filters('widget_title', $instance['title']) . "</h2>";
         }
 
 
@@ -123,7 +123,7 @@ class TSS_Popular_Posts_Widgets extends WP_Widget
                 echo '<li class="list-group-item d-flex justify-content-start align-items-start bg-transparent">
                         <a href="'. get_permalink() .'" class="text-decoration-none">
                             <div class="ms-2 me-auto">
-                                <div class="fw-bold text-white list-heading">'. get_the_title() .'</div>
+                                <h3 class="text-white">'. get_the_title() .'</h3>
                                 <small class="text-muted">Posted: March 21, 2022 at 1:50 pm</small>
                             </div>
                         </a>
