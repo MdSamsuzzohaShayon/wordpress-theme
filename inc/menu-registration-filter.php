@@ -7,7 +7,8 @@ function thesportsanctum_register_menus(){
         'top_menu' => __( 'Top Menu', 'thesportsanctum' ),
         'main_menu'  => __( 'Main Menu', 'thesportsanctum' ),
         'feature_menu'  => __( 'Feature Menu', 'thesportsanctum' ),
-        'footer_menu'  => __( 'Footer Menu', 'thesportsanctum' ),
+        'social_menu'  => __( 'Social Menu', 'thesportsanctum' ),
+        // 'footer_menu'  => __( 'Footer Menu', 'thesportsanctum' ),
     ) );
 }
 add_action( 'after_setup_theme', 'thesportsanctum_register_menus', 0 );

@@ -57,15 +57,4 @@
 
     <?php get_template_part('template-parts/segment', 'headertopmenu'); ?>
 
-
-    <!--Single post landing image start-->
-    <?php if (has_post_thumbnail()): ?>
-    <div class="landing-main-menu text-white single-post"
-         style="background-image: linear-gradient(to bottom, rgba(245, 246, 252, 0), #030015FF), url(<?php the_post_thumbnail_url('sport-large'); ?>);">
-        <?php else: ?>
-    <div class="landing-main-menu text-white single-post"
-         style="background-image: url(<?php echo get_template_directory_uri() . "/assets/img/default-bg.jpg"; ?>);">
-        <?php endif; ?>
-
-
-            <?php get_template_part('template-parts/segment', 'headermainmenu'); ?>
+    <?php get_template_part('template-parts/segment', 'headermainmenu'); ?>

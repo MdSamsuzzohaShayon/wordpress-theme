@@ -38,7 +38,21 @@
                           ?>
                       </a>
                     </a>
-                    <p class="text-muted">© 2021</p>
+                    <p class="text-muted">© 2022</p>
+                    <div class="footer-social-menu mt-1 ">
+                      <?php
+                      if(has_nav_menu('social_menu')){
+                        wp_nav_menu(array(
+                            'theme_location' => "social_menu",
+                            'menu_class' => "p-0 d-flex justify-content-center align-items-center m-0",
+                            'container' => "",
+                            'walker' => new Thesportsanctum_Social_Menu_Walker(),
+                        ));
+                      }else{
+                        echo '<div class="p-0 d-flex justify-content-center align-items-center m-0"></div>';
+                      }
+                      ?>
+                    </div>
                 </div>
                 <div class="col-md-3 col-sm-12 text-center text-md-start">
                     <?php

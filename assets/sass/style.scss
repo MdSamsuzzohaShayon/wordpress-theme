@@ -91,6 +91,7 @@ body{
   }
   h3{
     font-family: $heading-3-font-family;
+    text-transform: capitalize;
   }
   @media(max-width: $br-md){
     h2{
@@ -118,6 +119,15 @@ body{
 .top-menu, .top-navbar{
   height: 35px;
   color: $error-color-2 !important;
+  .menu-1, .menu-3{
+    width: 42%;
+  }
+  .menu-2{
+    width: 15%;
+  }
+  .menu-item{
+    height: 100%;
+  }
   .text-danger{
     color: $error-color-2 !important;
   }
@@ -309,6 +319,8 @@ body{
         object-position: center;
       }
       .stretched-link{
+        width: 100%;
+        margin: 0;
         text-decoration: none;
         &:after{
           position: static;
@@ -355,6 +367,11 @@ body{
       .cat-features{
         transform: translateY(0px);
         padding-top: 0;
+        .nav-link{
+          img{
+            width: 200px;
+          }
+        }
       }
       .features{
         transform: translateY(0px);
@@ -462,6 +479,25 @@ body{
 }
 
 
+.single-page-container{
+  .single-post-img{
+    object-fit: cover;
+    object-position: top;
+    max-height: 550px;
+  }
+}
+
+.single-related-post-item{
+  flex-basis: 23%;
+  height: 260px;
+  img{
+    height: 150px;
+    object-fit: cover;
+    object-position: top;
+  }
+}
+
+
 .comments-area{
   .comment-body{
     // color: white;
@@ -487,6 +523,14 @@ body{
   //background-color: #202234;
   background-color: $secondary-color-2;
   // font-family: $bellefair;
+  .footer-social-menu{
+    width: fit-content;
+  }
+  @media(max-width: $br-md){
+    .footer-social-menu{
+      width: auto;
+    }
+  }
   .nav-item{
     a{
       font-family: $heading-1-font-family ;
