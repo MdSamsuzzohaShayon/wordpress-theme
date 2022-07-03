@@ -11196,10 +11196,11 @@ body {
   font-weight: bold;
   font-size: 1rem;
 }
-@media (max-width: 768px) {
-  .main-menu a {
-    font-size: 0.8rem;
-  }
+.main-menu .main-menu-1, .main-menu .main-menu-3 {
+  width: 15%;
+}
+.main-menu .main-menu-2 {
+  width: 69%;
 }
 .main-menu .logo-holder {
   width: fit-content;
@@ -11207,6 +11208,9 @@ body {
 @media (max-width: 768px) {
   .main-menu a {
     font-size: 0.8rem;
+  }
+  .main-menu .main-menu-item {
+    width: 100%;
   }
   .main-menu .logo-holder {
     width: 100%;

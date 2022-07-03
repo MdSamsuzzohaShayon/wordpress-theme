@@ -1,6 +1,6 @@
 <?php get_header(); ?>
 <div class="container">
-    Show location map and author information's
+    <h1 class="my-5">About Author of this page</h1>
 
     <?php if (get_theme_mod('author-callout-display') == 'Yes') { ?>
         <div class="row row-padding author">

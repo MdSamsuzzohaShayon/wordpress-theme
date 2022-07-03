@@ -2,7 +2,9 @@
 <div class="main-menu">
     <div class="container">
         <!--        main navbar start -->
-        <div class="d-flex flex-wrap align-items-center justify-content-start justify-content-md-between py-3 bg-transparent">
+        <div class="d-flex flex-wrap align-items-center justify-content-start justify-content-md-between py-3 bg-transparent flex-md-row flex-column">
+          <!-- Logo menu start  -->
+          <div class="main-menu-item main-menu-1">
             <a href="<?php echo get_home_url(); ?>" class="logo-holder d-flex align-items-center col-md-3 mb-2 mb-md-0 text-dark text-decoration-none justify-content-center justify-content-md-start">
                 <?php
 
@@ -16,7 +18,11 @@
                 }
                 ?>
             </a>
+          </div>
+          <!-- Logo menu ends  -->
 
+          <!-- menu list start  -->
+          <div class="main-menu-item main-menu-2">
             <?php
             if(has_nav_menu('main_menu')){
               wp_nav_menu(array(
@@ -28,11 +34,14 @@
               ));
             }
             ?>
-
-            <div class="col-12 col-md-3 text-end">
+          </div>
+          <!-- menu list ends  -->
+          <!-- search menu start  -->
+            <div class="main-menu-item main-menu-3">
 <!--                handled by searchform.php-->
                 <?php get_search_form(); ?>
             </div>
+            <!-- search menu ends  -->
         </div>
         <!--        main navbar end -->
     </div>

@@ -8,10 +8,10 @@
 <?php get_header(); ?>
 
 <div class="container">
-    <h2 class="text-danger mt-3">Contact Us</h2>
+    <h1 class="text-danger my-5">Contact Us - <?php echo get_bloginfo('name'); ?></h1>
     <div class="contact-form row">
         <div class="col-md-6 col-sm-12">
-            Something
+            <?php echo get_bloginfo('description'); ?>
         </div>
         <div class="col-md-6 col-sm-12">
 <!--            <form action="/">-->
@@ -33,10 +33,10 @@
 <!--                </div>-->
 <!--                <button class="btn btn-danger px-5 rounded-0" type="submit">Send</button>-->
 <!--            </form>-->
+            <h2>For any kind of query contact us!</h2>
             <?php get_template_part('template-parts/contact', 'form'); ?>
         </div>
     </div>
 </div>
 
 <?php get_footer(); ?>
-

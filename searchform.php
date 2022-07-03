@@ -1,6 +1,6 @@
 <!-- Search result will be displayed in search.php -->
 <form class="d-flex" id="search-menu-item" action="/" method="get"> <!-- use / instead of /wordpress for production -->
-    <div class="input-group mb-3 rounded-pill border border-light">
+    <div class="input-group rounded-pill border border-light">
         <input
                 type="text"
                 class="form-control bg-transparent py-2 text-light outline-none"
